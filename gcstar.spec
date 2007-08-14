@@ -1,6 +1,6 @@
 %define name    gcstar
 %define version 1.1.1
-%define release %mkrel 1
+%define release %mkrel 2
 %define iconname %{name}.png
 
 %define section  More Applications/Databases
@@ -38,8 +38,8 @@ Currently Gstar only supports films.
 %{__mkdir_p} %{buildroot}%{_prefix}
 %{__install} -d %{buildroot}%{_bindir}
 %{__install} bin/gcstar %{buildroot}%{_bindir}
-%{__install} -d %{buildroot}%{_libdir}
-%{__cp} -a lib/gcstar %{buildroot}%{_libdir}
+%{__install} -d %{buildroot}%{_prefix}/lib
+%{__cp} -a lib/gcstar %{buildroot}%{_prefix}/lib
 %{__install} -d %{buildroot}%{_datadir}
 %{__cp} -a share/* %{buildroot}%{_datadir} 
 %{__install} -d %{buildroot}%{_mandir}/man1
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root) 
 %doc README CHANGELOG
 %{_bindir}/%{name}
-%{_libdir}/%{name}
+%{_prefix}/lib/%{name}
 %{_datadir}/applications/%{name}*
 %{_datadir}/%{name}
 %{_menudir}/%{name}
