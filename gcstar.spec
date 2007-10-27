@@ -1,6 +1,6 @@
 %define name    gcstar
-%define version 1.1.1
-%define release %mkrel 2
+%define version 1.2.2
+%define release %mkrel 1
 %define iconname %{name}.png
 
 %define section  More Applications/Databases
@@ -13,7 +13,7 @@ Release:    %{release}
 License:    GPL
 Group:      Databases
 URL:        https://gna.org/projects/gcstar/
-Source:     %{name}-%{version}.tar.bz2
+Source:     %{name}-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-root
 Requires:   gtk2
 BuildArch:  noarch 
