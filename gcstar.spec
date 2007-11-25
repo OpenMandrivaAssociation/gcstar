@@ -1,19 +1,18 @@
 %define name    gcstar
-%define version 1.2.2
+%define version 1.3.0
 %define release %mkrel 1
 %define iconname %{name}.png
 
-%define section  More Applications/Databases
 %define title   Gcfilms
 
 Summary:    A collection manager 
 Name:       %{name}
 Version:    %{version}
 Release:    %{release}
-License:    GPL
+License:    GPLv2+
 Group:      Databases
 URL:        https://gna.org/projects/gcstar/
-Source:     %{name}-%{version}.tar.gz
+Source:     http://download.gna.org/gcstar/%{name}-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-root
 Requires:   gtk2
 BuildArch:  noarch 
