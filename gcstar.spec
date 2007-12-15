@@ -49,23 +49,11 @@ mkdir -p %{buildroot}{%{_miconsdir},%{_iconsdir},%{_liconsdir},%{_menudir}}
 %{__cp} share/gcstar/icons/%{name}_48x48.png %{buildroot}%{_liconsdir}/%{iconname}
 %{__cp} share/gcstar/icons/%{name}_32x32.png %{buildroot}%{_iconsdir}/%{iconname} 
 %{__cp} share/gcstar/icons/%{name}_16x16.png %{buildroot}%{_miconsdir}/%{iconname} 
-cat > %{buildroot}%{_menudir}/%{name} << EOF
-?package(%{name}):\
-    command="%{name}" \
-    icon="%{iconname}" \
-    title="%{title}" \
-    longtitle="Gcstar collection manager" \
-    needs="x11" \
-    section="%section" \
-        xdg="true"
-EOF
 
 desktop-file-install --vendor="" \
---remove-category="Application" \
---add-category="GTK" \
---add-category="Database" \
---add-category="X-MandrivaLinux-MoreApplications-Databases" \
---dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
+	--add-category="GTK" \
+	--add-category="Database" \
+	--dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
  
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -83,10 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/%{name}
 %{_datadir}/applications/%{name}*
 %{_datadir}/%{name}
-%{_menudir}/%{name}
 %{_miconsdir}/%{iconname}
 %{_iconsdir}/%{iconname}
 %{_liconsdir}/%{iconname} 
 %{_mandir}/man1/%{name}*
-
-
