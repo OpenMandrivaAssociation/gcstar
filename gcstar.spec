@@ -1,6 +1,6 @@
 %define name    gcstar
 %define version 1.3.1
-%define release %mkrel 1
+%define release %mkrel 2
 %define iconname %{name}.png
 
 %define title   Gcfilms
