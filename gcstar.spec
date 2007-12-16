@@ -13,10 +13,10 @@ License:    GPLv2+
 Group:      Databases
 URL:        https://gna.org/projects/gcstar/
 Source:     http://download.gna.org/gcstar/%{name}-%{version}.tar.gz
+Patch0:     gcstar-1.3.1-fix-desktop-file.patch
 BuildRoot:  %{_tmppath}/%{name}-root
 Requires:   gtk2
 BuildArch:  noarch 
-BuildRequires: desktop-file-utils
 
 %description
 Gstar is an application that can manage multiple collections.
@@ -26,14 +26,9 @@ Currently Gstar only supports films.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p0
  
-# %%build
-
-# this doesn't work..
-#./install --text --prefix=$RPM_BUILD_ROOT/usr 
-
 %install
-
 %{__mkdir_p} %{buildroot}%{_prefix}
 %{__install} -d %{buildroot}%{_bindir}
 %{__install} bin/gcstar %{buildroot}%{_bindir}
@@ -50,11 +45,6 @@ mkdir -p %{buildroot}{%{_miconsdir},%{_iconsdir},%{_liconsdir},%{_menudir}}
 %{__cp} share/gcstar/icons/%{name}_32x32.png %{buildroot}%{_iconsdir}/%{iconname} 
 %{__cp} share/gcstar/icons/%{name}_16x16.png %{buildroot}%{_miconsdir}/%{iconname} 
 
-desktop-file-install --vendor="" \
-	--add-category="GTK" \
-	--add-category="Database" \
-	--dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
- 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
