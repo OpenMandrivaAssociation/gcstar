@@ -12,6 +12,7 @@ Group:      Databases
 URL:        https://gna.org/projects/gcstar/
 Source:     http://download.gna.org/gcstar/%{name}-%{version}.tar.gz
 Patch0:     gcstar-1.3.1-fix-desktop-file.patch
+BuildRoot:  %{_tmppath}/%{name}-root
 Requires:   gtk2
 BuildArch:  noarch 
 
