@@ -1,6 +1,6 @@
 %define name    gcstar
 %define version 1.3.2
-%define release %mkrel 2
+%define release %mkrel 3
 %define iconname %{name}.png
 
 Summary:    A collection manager 
@@ -15,7 +15,7 @@ Patch0:     gcstar-1.3.1-fix-desktop-file.patch
 BuildRoot:  %{_tmppath}/%{name}-root
 Requires:   gtk2
 BuildArch:  noarch 
-Obsoletes:  gcfilm
+Obsoletes:  gcfilms
 
 %description
 Gstar is an application that can manage multiple collections.
