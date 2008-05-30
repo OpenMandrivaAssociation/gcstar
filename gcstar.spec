@@ -1,6 +1,6 @@
 %define name    gcstar
-%define version 1.3.2
-%define release %mkrel 3
+%define version 1.4.0
+%define release %mkrel 1
 %define iconname %{name}.png
 
 Summary:    A collection manager 
@@ -11,9 +11,9 @@ License:    GPLv2+
 Group:      Databases
 URL:        https://gna.org/projects/gcstar/
 Source:     http://download.gna.org/gcstar/%{name}-%{version}.tar.gz
-Patch0:     gcstar-1.3.1-fix-desktop-file.patch
 BuildRoot:  %{_tmppath}/%{name}-root
 Requires:   gtk2
+BuildRequires: desktop-file-utils
 BuildArch:  noarch 
 Obsoletes:  gcfilms
 
@@ -25,7 +25,6 @@ Currently Gstar only supports films.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p0
  
 %install
 %{__mkdir_p} %{buildroot}%{_prefix}
@@ -38,6 +37,10 @@ Currently Gstar only supports films.
 %{__install} -d %{buildroot}%{_mandir}/man1
 %{__install} man/%name.1 %{buildroot}%{_mandir}/man1/%name.1
 
+desktop-file-install --vendor='' \
+	--dir %buildroot%_datadir/applications \
+	--add-category='Office;AudioVideo;GTK' \
+	%buildroot%_datadir/applications/*.desktop
 
 mkdir -p %{buildroot}{%{_miconsdir},%{_iconsdir},%{_liconsdir},%{_menudir}}
 %{__cp} share/gcstar/icons/%{name}_48x48.png %{buildroot}%{_liconsdir}/%{iconname}
