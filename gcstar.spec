@@ -1,5 +1,5 @@
 %define name    gcstar
-%define version 1.4.0
+%define version 1.4.1
 %define release %mkrel 1
 %define iconname %{name}.png
 
