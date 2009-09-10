@@ -1,6 +1,6 @@
 %define name    gcstar
 %define version 1.4.3
-%define release %mkrel 1
+%define release %mkrel 2
 %define iconname %{name}.png
 
 Summary:    A collection manager 
