@@ -1,7 +1,9 @@
 %define name    gcstar
 %define version 1.5.0
-%define release %mkrel 1
+%define release %mkrel 2
 %define iconname %{name}.png
+
+%define _requires_exceptions perl(GCItemsLists::GCTextLists)
 
 Summary:    A collection manager 
 Name:       %{name}
