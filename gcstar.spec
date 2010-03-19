@@ -1,9 +1,7 @@
 %define name    gcstar
 %define version 1.5.0
-%define release %mkrel 2
+%define release %mkrel 3
 %define iconname %{name}.png
-
-%define _requires_exceptions perl(GCItemsLists::GCTextLists)
 
 Summary:    A collection manager 
 Name:       %{name}
@@ -18,6 +16,8 @@ Requires:   gtk2
 BuildRequires: desktop-file-utils
 BuildArch:  noarch 
 Obsoletes:  gcfilms
+# these are self-provided, fixes mdv bug#58217
+Provides:   perl(GCItemsLists::GCImageLists) perl(GCItemsLists::GCTextLists)
 
 %description
 Gstar is an application that can manage multiple collections.
