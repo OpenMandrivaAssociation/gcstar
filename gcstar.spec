@@ -1,5 +1,5 @@
 %define name    gcstar
-%define version 1.6.0
+%define version 1.6.1
 %define release %mkrel 1
 %define iconname %{name}.png
 
@@ -18,6 +18,7 @@ BuildArch:  noarch
 Obsoletes:  gcfilms
 # these are self-provided, fixes mdv bug#58217
 Provides:   perl(GCItemsLists::GCImageLists) perl(GCItemsLists::GCTextLists)
+Provides:   perl(GCPlugins::GCfilms::GCThemoviedb)
 
 %description
 Gstar is an application that can manage multiple collections.
