@@ -3,11 +3,12 @@
 Summary:	A collection manager 
 Name:		gcstar
 Version:	1.6.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Databases
 URL:		https://gna.org/projects/gcstar/
 Source:		http://download.gna.org/gcstar/%{name}-%{version}.tar.gz
+Patch0:		gcstar-1.6.2-ru.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 Requires:	gtk2
 BuildRequires:	desktop-file-utils
@@ -24,6 +25,7 @@ You can update your data directly from the Internet.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1 -b .ru
 
 %install
 %__rm -rf %{buildroot}
