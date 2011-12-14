@@ -3,7 +3,7 @@
 Summary:	A collection manager 
 Name:		gcstar
 Version:	1.6.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Databases
 URL:		https://gna.org/projects/gcstar/
