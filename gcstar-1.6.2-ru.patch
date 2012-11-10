@@ -1,0 +1,2434 @@
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportCSV.pm gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportCSV.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportCSV.pm	2010-07-27 06:51:34.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportCSV.pm	2011-12-10 07:59:31.000000000 +1100
+@@ -33,7 +33,7 @@
+         'Header' => 'Выключить имя полей вверху',
+         'Separator' => 'Разделитель',
+         'Replacement' => 'Заменить разделитель на',
+-        'Charset' => 'Charset',
++        'Charset' => 'Кодировка',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportExternal.pm gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportExternal.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportExternal.pm	2010-07-27 06:51:46.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportExternal.pm	2011-12-10 06:44:19.000000000 +1100
+@@ -30,8 +30,8 @@
+     our @EXPORT = qw(%lang);
+ 
+     our %lang = (
+-        'Name' => 'External disk',
+-        'ZipAll' => 'Put everything in a zipped file (.gcz)',
++        'Name' => 'Внешний диск',
++        'ZipAll' => 'Упаковать все файлы архив(.gcz)',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportHTML.pm gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportHTML.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportHTML.pm	2010-07-27 06:51:37.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportHTML.pm	2011-12-10 06:48:46.000000000 +1100
+@@ -30,9 +30,9 @@
+     our @EXPORT = qw(%lang);
+ 
+     our %lang = (
+-        'ModelNotFound' => 'Invalid template file',
+-        'UseFile' => 'Use file specified below',
+-        'TemplateExternalFile' => 'Template file',
++        'ModelNotFound' => 'Недопустимый шаблонный файл',
++        'UseFile' => 'Используйте файл, определенный ниже',
++        'TemplateExternalFile' => 'Шаблонный файл',
+         'WithJS' => 'Использовать Javascript',
+        	'FileTemplate' => 'Шаблон:',
+         'Preview' => 'Предварительный просмотр',
+@@ -45,7 +45,7 @@
+         'Note' => 'Список сгенерирован <a href="http://www.gcstar.org/">GCstar</a>',
+         'InputTitle' => 'Введите текст для поиска',
+         'SearchType1' => 'Только заголовок',
+-        'SearchType2' => 'полная информация',
++        'SearchType2' => 'Полная информация',
+         'SearchButton' => 'Искать',    
+         'SearchTitle' => 'Отобразить только фильмы удовлетворяющие предыдущему критерию',
+         'AllButton' => 'Все',
+@@ -57,7 +57,7 @@
+         'Borrowed' => 'Взял : ',
+         'NotBorrowed' => 'Доступен',
+         'Top' => 'Наверх',
+-        'Bottom' => 'Bottom',
++        'Bottom' => 'Конец',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportPDB.pm gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportPDB.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCExport/GCExportPDB.pm	2010-07-27 06:51:46.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCExport/GCExportPDB.pm	2011-12-10 06:50:42.000000000 +1100
+@@ -31,7 +31,7 @@
+ 
+     our %lang = (
+         'Name' => 'Palm PDB',
+-        'DatabaseName' => 'Database name',
++        'DatabaseName' => 'Имя базы данных',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportCSV.pm gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportCSV.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportCSV.pm	2010-08-12 04:05:50.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportCSV.pm	2011-12-10 08:00:18.000000000 +1100
+@@ -30,12 +30,12 @@
+     our @EXPORT = qw(%lang);
+ 
+     our %lang = (
+-        'Charset' => 'Charset',
++        'Charset' => 'Кодировка',
+         'Header' => 'Игнорировать первую строку',
+         'Separator' => 'Разделитель',
+         'Plugin' => 'Использовать сайт',
+         'UseFirst' => 'Выберите первый (если много результатов)',
+-        'SearchField' => 'Search for items using',        
++        'SearchField' => 'Поиск элементов для использования',        
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportFolder.pm gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportFolder.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportFolder.pm	2010-07-27 06:51:46.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportFolder.pm	2011-12-13 04:10:47.000000000 +1100
+@@ -31,33 +31,39 @@
+     our @EXPORT = qw(%lang);
+ 
+     our %lang = (
+-        'Name' => 'Folder',
+-        'Recursive' => 'Browse sub-folders',
+-        'Suffixes' => 'Suffixes or extensions of the files',
+-        'SuffixesTooltip' => 'A comma-separated list of suffixes or extensions of files to consider',
+-        'Remove' => 'To be removed from names',
+-        'RemoveTooltip' => 'A comma-seperated list of words that should be removed from file names to create the fetched names',
+-        'Ask'=> 'Ask',
+-        'AskEnd'=> 'Ask all at end',
+-        'AddWithoutInfo'=> 'Add without infos',
+-        'DontAdd'=> 'Do not add',
+-        'TakeFirst' => 'Select first',
+-        'MultipleResult'=> 'Multiple results',
+-        'MultipleResultTooltip'=> 'What do we do when more than 1 result is return by the plugin',
+-        'RemoveWholeWord' => 'Remove only whole words',
+-        'NoResult'=> 'No results',
+-        'NoResultTooltip'=> 'What do we do when no search results is return by the plugin',
+-        'RemoveTooltipWholeWord' => 'Words will be removed only if they appear as an entire word',
+-        'RemoveRegularExpr' => 'Regular expression',
+-        'RemoveTooltipRegularExpr' => 'Consider that \'To be removed from names\' is a perl regular expression',
+-        'SkipFileAlreadyInCollection' => 'Add new files only',
+-        'SkipFileAlreadyInCollectionTooltip' => 'Add only files not already in the collection',
+-        'SkipFileNo' => 'No',
+-        'SkipFileFullPath' => 'based on full path',
+-        'SkipFileFileName' => 'based on file name',
+-        'SkipFileFileNameAndUpdate' => 'based on file name (but update path in collection)',
+-        'InfoFromFileNameRegExp' => 'Parse file name with this regular expression',
+-        'InfoFromFileNameRegExpTooltip' => 'Use this to retrieve infos from filename (applied after removing extension).\nLeave empty if not needed.\nKnown fields : \n$T:Title, $A:Alphabetised title, $Y:Release date, $S:Season, $E:Episode, $N:Alphabetised serie name, $x:Part number, $y: Total part number',
++        'Name' => 'Папка',
++        'Recursive' => 'Просмотеть подпапки',
++        'Suffixes' => 'Суффиксы или расширения файлов',
++        'SuffixesTooltip' => 'Список разделенных запятой значений суффиксов или расширений файлов',
++        'Remove' => 'Чтобы удалить из имени',
++        'RemoveTooltip' => 'Разделите запятыми список слов, которые должны быть удалены из имен файлов при создании имени',
++        'Ask'=> 'Спросить',
++        'AskEnd'=> 'Спросить все в конце',
++        'AddWithoutInfo'=> 'Добавить без информации',
++        'DontAdd'=> 'Не добавлять',
++        'TakeFirst' => 'Выбрать первый',
++        'MultipleResult'=> 'Несколько результатов',
++        'MultipleResultTooltip'=> 'Что делать, когда найдено больше 1 результата',
++        'RemoveWholeWord' => 'Удалить только целые слова',
++        'NoResult'=> 'Нет результатов',
++        'NoResultTooltip'=> 'Что делать, когда нет ни каких результатов поиска',
++        'RemoveTooltipWholeWord' => 'Слова будут удалены, только если они выглядят как целое слово',
++        'RemoveRegularExpr' => 'Регулярные выражения',
++        'RemoveTooltipRegularExpr' => 'Для того чтобы \'удалить из имени\' нужно регулярное выражение perl',
++        'SkipFileAlreadyInCollection' => 'Добавить только новые файлы',
++        'SkipFileAlreadyInCollectionTooltip' => 'Добавить только те файлы, которых еще нет в коллекции',
++        'SkipFileNo' => 'Нет',
++        'SkipFileFullPath' => 'Jснованный на полном пути',
++        'SkipFileFileName' => 'основанный на имени файла',
++        'SkipFileFileNameAndUpdate' => 'основанный на имени файла (или пути обновления коллекции)',
++        'InfoFromFileNameRegExp' => 'Разбор имени файла в этом регулярном выражении',
++        'InfoFromFileNameRegExpTooltip' => 'Использовать для получения информация из имени файла (после удаления расширения).\nОставьте пустым, если не требуется.\nИзвестные поля : \n$T:Название, $A:Расположить в алфавитном, $Y:Дата выпуска, $S:Сезон, $E:Эпизод, $N:Имя в алфавитном, $x:Номер части, $y: Количество частей',
++        'Name' => 'Список названий',
++        'Plugin' => 'Использовать сайт',
++        'UseFirst' => 'Выберать первый (если много результатов)',
++        'CommentAuto' => 'Фильмы импортированы автоматически.',
++        'CommentSite' => 'Вэб сайт: ',
++        'CommentTitle' => 'Название: ',
+ 
+      );
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportList.pm gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportList.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportList.pm	2010-07-27 06:51:42.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportList.pm	2011-12-13 04:10:04.000000000 +1100
+@@ -32,9 +32,9 @@
+     our %lang = (
+         'Name' => 'Список названий',
+         'Plugin' => 'Использовать сайт',
+-        'UseFirst' => 'Выберите первый (если много результатов)',
++        'UseFirst' => 'Выберать первый (если много результатов)',
+         'CommentAuto' => 'Фильмы импортированы автоматически.',
+-        'CommentSite' => 'Вэбсайт: ',
++        'CommentSite' => 'Вэб сайт: ',
+         'CommentTitle' => 'Название: ',
+      );
+ }
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportScanner.pm gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportScanner.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCImport/GCImportScanner.pm	2010-08-29 07:35:48.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCImport/GCImportScanner.pm	2011-12-10 06:40:12.000000000 +1100
+@@ -30,20 +30,20 @@
+     our @EXPORT = qw(%lang);
+ 
+     our %lang = (
+-        'Name' => 'Barcode scanner',
+-        'Type' => 'Scanner type',
+-        'Local' => 'Local (used as a keyboard)',
+-        'Network' => 'Network (eg: GCstar Scanner for Android)',
+-        'Port' => 'Port to listen on',
+-        'Plugin' => 'Site to be used',
+-        'UseFirst' => 'Select first one if many results',
+-        'Waiting' => 'Waiting for barcode',
+-        'EAN' => 'Barcode',
+-        'ScanPrompt' => 'Scan an item or press on Done',
+-        'ScanOtherPrompt' => 'Scan another item or press on Done',
+-        'Previous' => '"%s" will be added.',
+-        'NothingFound' => 'Nothing was found for "%s". An empty item will be added.',
+-        'Terminate' => 'Done',
++        'Name' => 'Сканер штрих-кода',
++        'Type' => 'Тип сканера',
++        'Local' => 'Локальный (используемый в качестве клавиатуры)',
++        'Network' => 'Сеть (eg: Сканер GCstar для Android)',
++        'Port' => 'Порт для прослушивания',
++        'Plugin' => 'Сайт, который будет использоваться',
++        'UseFirst' => 'Выберите сначала один, если много результатов',
++        'Waiting' => 'Ожидание штрих-кода',
++        'EAN' => 'Штрих-код',
++        'ScanPrompt' => 'Сканируйте элемент или нажмите Готово',
++        'ScanOtherPrompt' => 'Сканируйте другой элемент или нажмите Готовоe',
++        'Previous' => '"%s" будут добавлены.',
++        'NothingFound' => 'Ничего не найдено для "%s". Будет добавлен пустой элемент.',
++        'Terminate' => 'Готово',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCboardgames.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCboardgames.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCboardgames.pm	2010-07-27 06:51:42.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCboardgames.pm	2011-12-13 04:38:09.000000000 +1100
+@@ -31,55 +31,55 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Board games collection',
+-        Items => {0 => 'Game',
+-                  1 => 'Game',
+-                  X => 'Games'},
+-        NewItem => 'New game',
++        CollectionDescription => 'Коллекция настольных игр',
++        Items => {0 => 'Игра',
++                  1 => 'Игра',
++                  X => 'Игра'},
++        NewItem => 'Новая игра',
+     
+         Id => 'Id',
+-        Name => 'Name',
+-        Original => 'Original name',
+-        Box => 'Box picture',
+-        DesignedBy => 'Designed by',
+-        PublishedBy => 'Published by',
+-        Players => 'Number of players',
+-        PlayingTime => 'Playing time',
+-        SuggestedAge => 'Suggested age',
+-        Released => 'Released',
+-        Description => 'Description',
+-        Category => 'Category',
+-        Mechanics => 'Mechanics',
+-        ExpandedBy => 'Expanded by',
+-        ExpansionFor => 'Expansion for',
+-        GameFamily => 'Game family',
+-        IllustratedBy => 'Illustrated by',
+-        Url => 'Web page',
+-        TimesPlayed => 'Times played',
+-        CompleteContents => 'Complete contents',
+-        Copies => 'No. of copies',
+-        Condition => 'Condition',
+-        Photos => 'Photos',
+-        Photo1 => 'First picture',
+-        Photo2 => 'Second picture',
+-        Photo3 => 'Third picture',
+-        Photo4 => 'Fourth picture',
+-        Comments => 'Comments',
+-
+-        Perfect => 'Perfect',
+-        Good => 'Good',
+-        Average => 'Average',
+-        Poor => 'Poor',
+-
+-        CompleteYes => 'Complete contents',
+-        CompleteNo => 'Missing pieces',
+-
+-        General => 'General',
+-        Details => 'Details',
+-        Personal => 'Personal',
+-        Information => 'Information',
++        Name => 'Имя',
++        Original => 'Оригинальное имя',
++        Box => 'Вставка изображения',
++        DesignedBy => 'Разработана',
++        PublishedBy => 'Издатель',
++        Players => 'Количество игроков',
++        PlayingTime => 'Время игры',
++        SuggestedAge => 'Рекомендованный возраст',
++        Released => 'Выпущена',
++        Description => 'Описание',
++        Category => 'Категория',
++        Mechanics => 'Механика',
++        ExpandedBy => 'Расширенная',
++        ExpansionFor => 'Расширение для',
++        GameFamily => 'Семейство игр',
++        IllustratedBy => 'Иллюстрирована',
++        Url => 'Вэб страница',
++        TimesPlayed => 'Время игры',
++        CompleteContents => 'Полное содержание',
++        Copies => 'Количество копий',
++        Condition => 'Состояние',
++        Photos => 'Фотографии',
++        Photo1 => 'Первая картинка',
++        Photo2 => 'Вторая картинка',
++        Photo3 => 'Третья картинка',
++        Photo4 => 'Четвертая картинка',
++        Comments => 'Комментарии',
++
++        Perfect => 'Идеальное',
++        Good => 'Хорошее',
++        Average => 'Среднее',
++        Poor => 'Плохое',
++
++        CompleteYes => 'Полное содержание',
++        CompleteNo => 'Отсутствующие части',
++
++        General => 'Общие',
++        Details => 'Детали',
++        Personal => 'Личные',
++        Information => 'Информация',
+ 
+-        FilterRatingSelect => 'Rating At _Least...',
++        FilterRatingSelect => 'Рейтинг не ниже...',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCbooks.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCbooks.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCbooks.pm	2010-07-27 06:51:34.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCbooks.pm	2011-12-09 11:36:52.000000000 +1100
+@@ -53,9 +53,9 @@
+         Format => 'Формат',
+         Comments => 'Комментарии',
+         Url => 'Узел ВЭБ',
+-        Translator => 'Translator',
+-        Artist => 'Artist',
+-        DigitalFile => 'Digital version',
++        Translator => 'Переводчик',
++        Artist => 'Художник',
++        DigitalFile => 'Цифровая версия',
+ 
+         General => 'Общее',
+         Details => 'Детали',
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCcoins.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCcoins.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCcoins.pm	2010-07-27 06:51:45.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCcoins.pm	2011-12-14 07:33:04.000000000 +1100
+@@ -31,40 +31,44 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Numismatic collection',
+-        Items => 'Coins',
+-        NewItem => 'New coin',
++        CollectionDescription => 'Нумизматическая коллекция',
++        Items => 'Монеты',
++        NewItem => 'Новая монета',
+ 
+-        Name => 'Name',
+-        Country => 'Country',
+-        Year => 'Year',
+-        Currency => 'Currency',
+-        Value => 'Value',
+-        Picture => 'Main picture',
+-        Diameter => 'Diameter',
+-        Metal => 'Metal',
+-        Edge => 'Edge',
+-        Edge1 => 'Edge 1',
+-        Edge2 => 'Edge 2',
+-        Edge3 => 'Edge 3',
+-        Edge4 => 'Edge 4',
+-        Head => 'Head',
+-        Tail => 'Tail',
+-        Comments => 'Comments',
+-        History => 'History',
+-        Website => 'Website',
+-        Estimate => 'Estimate',
+-        References => 'References',
+-        Type => 'Type',
+-        Coin => 'Coin',
+-        Banknote => 'Bank note',
++        Name => 'Имя',
++        Country => 'Страна',
++        Year => 'Год',
++        Currency => 'Валюта',
++        Value => 'Значение',
++        Picture => 'Основное изображение',
++        Diameter => 'Диаметр',
++        Metal => 'Метал',
++        Edge => 'Ребро',
++        Edge1 => 'Ребро 1',
++        Edge2 => 'Ребро 2',
++        Edge3 => 'Ребро 3',
++        Edge4 => 'Ребро 4',
++        Head => 'Перед',
++        Tail => 'Зад',
++        Front => 'Спереди',
++        Back => 'Сзади',
++        Comments => 'Комментарий',
++        History => 'История',
++        Location => 'Расположение',
++        Website => 'Вэб сайт',
++        Estimate => 'Оценка',
++        References => 'Ссылки',
++        Type => 'Тип',
++        Coin => 'Монета',
++        Banknote => 'Банкнота',
++        Intervalle => 'Интервал',
+ 
+-        Main => 'Main',
+-        Description => 'Description',
+-        Other => 'Other information',
+-        Pictures => 'Pictures',
++        Main => 'Главное',
++        Description => 'Описание',
++        Other => 'Другая информация',
++        Pictures => 'Картинка',
+     
+-        Condition => 'Condition (PCGS)',
++        Condition => 'Состояние (PCGS)',
+         Grade1  => 'BS-1',
+         Grade2  => 'FR-2',
+         Grade3  => 'AG-3',
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCcomics.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCcomics.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCcomics.pm	2010-07-27 06:51:43.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCcomics.pm	2011-12-14 05:49:11.000000000 +1100
+@@ -31,42 +31,41 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Comics collection',
+-        Items => {0 => 'Comics',
+-                  1 => 'Comic',
+-                  X => 'Comics'},
+-        NewItem => 'New comic',
++        CollectionDescription => 'Коллекция комиксов',
++        Items => 'Комиксы',
++        NewItem => 'Новый комикс',
+     
+     
+         Id => 'Id',
+-        Name => 'Name',
+-        Series => 'Series',
+-        Volume => 'Volume',
+-        Title => 'Title',
+-        Writer => 'Writer',
+-        Illustrator => 'Illustrator',
+-        Colourist => 'Colourist',
+-        Publisher => 'Publisher',
+-        Synopsis => 'Synopsis',
+-        Collection => 'Collection',
+-        PublishDate => 'Publish Date',
+-        PrintingDate => 'Printing Date',
++        Name => 'Имя',
++        Series => 'Серия',
++        Volume => 'Том',
++        Title => 'Название',
++        Writer => 'Писатель',
++        Illustrator => 'Иллюстратор',
++        Colourist => 'Колорист',
++        Publisher => 'Издатель',
++        Synopsis => 'Краткое изложение',
++        Collection => 'Коллекция',
++        PublishDate => 'Дата публикации',
++        PrintingDate => 'Дата печати',
+         ISBN => 'ISBN',
+-        Type => 'Type',
+-		Category => 'Category',
+-        Format => 'Format',
+-        NumberBoards => 'Number of Boards',
+-		Signing => 'Signing',
+-        Cost => 'Cost',
+-        Rating => 'Rating',
+-        Comment => 'Comments',
+-        Url => 'Web page',
++        Type => 'Тип',
++		Category => 'Категория',
++        Format => 'Формат',
++        NumberBoards => 'Номер подшивки',
++		Signing => 'Подписка',
++        File => 'Файл',
++        Cost => 'Стоимость',
++        Rating => 'Рейтинг',
++        Comment => 'Комментарии',
++        Url => 'Вэб страница',
+ 
+-        FilterRatingSelect => 'Rating At _Least...',
++        FilterRatingSelect => 'Рейтинг не ниже...',
+ 
+-        Main => 'Main items',
+-        General => 'General',
+-        Details => 'Details',
++        Main => 'Основные пункты',
++        General => 'Общие',
++        Details => 'Детально',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCfilms.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCfilms.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCfilms.pm	2010-07-27 06:51:42.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCfilms.pm	2011-12-10 08:46:38.000000000 +1100
+@@ -47,16 +47,16 @@
+         Image => 'Картинка',
+         Original => 'Оригинальный заголовок',
+         Actors => 'Актеры',
+-        Actor => 'Actor',
+-        Role => 'Role',
++        Actor => 'Актер',
++        Role => 'Роль',
+         Comment => 'Комментарии',
+         Synopsis => 'Описание',
+         Seen => 'Просмотрен',
+-        Number => '# носителей',
++        Number => 'носителей',
+         Format => 'Носитель',
+-        Region => 'Region',
+-        Identifier => 'Identifier',
+-        Url => 'ВЭБ',
++        Region => 'Регион',
++        Identifier => 'Идентификатор',
++        Url => 'Вэб',
+         Audio => 'Аудио',
+         Video => 'Видео формат',
+         Trailer => 'Видео файл',
+@@ -68,7 +68,7 @@
+         SeenNo => 'Не смотрел',
+ 
+         AgeUnrated => 'Без ограничений',
+-        AgeAll => 'Для _Любого возраста',
++        AgeAll => 'Для _любого возраста',
+         AgeParent => 'Под присмотром родителей',
+ 
+         Main => 'Основное',
+@@ -83,7 +83,7 @@
+         FilterAudienceAge => 'Возраст аудитории:',
+         FilterSeenNo => 'Нет',
+         FilterSeenYes => '_Уже просмотрено',
+-        FilterRatingSelect => 'По Крайней мере...',
++        FilterRatingSelect => 'Рейтинг не ниже...',
+ 
+         ExtractSize => 'Размер',
+      );
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCgames.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCgames.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCgames.pm	2010-08-12 04:05:50.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCgames.pm	2011-12-13 00:30:15.000000000 +1100
+@@ -31,7 +31,7 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Коллекция видео-игр',
++        CollectionDescription => 'Коллекция видео игр',
+         Items => 'Игры',
+         NewItem => 'Новая игра',
+     
+@@ -42,13 +42,13 @@
+         Players => 'Количество игроков',
+         Released => 'Дата выпуска',
+         Editor => 'Редактор',
+-        Developer => 'Developer',
++        Developer => 'Разработчик',
+         Genre => 'Жанр',
+         Box => 'Изображения коробки',
+-        Case => 'Case',
+-        Manual => 'Instructions manual',
++        Case => 'Коробка',
++        Manual => 'Руководство',
+         Completion => 'Пройдено (%)',
+-        Executable => 'Executable',
++        Executable => 'Исполняемый',
+         Description => 'Описание',
+         Codes => 'Коды',
+         Code => 'Код',
+@@ -57,23 +57,23 @@
+         Screenshots => 'Снимки экраны',
+         Screenshot1 => 'Первый снимок',
+         Screenshot2 => 'Второй снимок',
+-        Comments => 'Comments',
+-        Url => 'ВЭБ страница',
++        Comments => 'Коментарии',
++        Url => 'Вэб страница',
+         Unlockables => 'Бонусы',
+         Unlockable => 'Бонусы',
+         Howto => 'Как разблокировать',
+-        Exclusive => 'Exclusive',
+-        Resolutions => 'Display resolutions',
+-        InstallationSize => 'Size',
+-        Region => 'Region',
+-        SerialNumber => 'Serial Number',        
++        Exclusive => 'Эксклюзивный',
++        Resolutions => 'Разрешения дисплея',
++        InstallationSize => 'Размер',
++        Region => 'Регион',
++        SerialNumber => 'Серийный номер',        
+ 
+         General => 'Общее',
+         Details => 'Детали',
+         Tips => 'Подсказки',
+         Information => 'Информация',
+ 
+-        FilterRatingSelect => 'По Крайней мере...',
++        FilterRatingSelect => 'Рейтинг не ниже...',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCgeneric.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCgeneric.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCgeneric.pm	2010-07-27 06:51:36.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCgeneric.pm	2011-12-09 20:43:08.000000000 +1100
+@@ -31,11 +31,11 @@
+ 
+     our %lang = (
+     
+-        Items => {0 => 'Item',
+-                  1 => 'Item',
+-                  X => 'Items'
++        Items => {0 => 'Элемент',
++                  1 => 'Элемент',
++                  X => 'Элементы'
+                   },
+-        NewItem => 'New item',
++        NewItem => 'Новый элемент',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCminicars.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCminicars.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCminicars.pm	2010-04-01 19:45:10.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCminicars.pm	2011-12-14 07:27:17.000000000 +1100
+@@ -31,150 +31,151 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Mini vehicles collection',
+-        Items => {0 => 'Vehicle',
+-                  1 => 'Vehicle',
+-                  X => 'Vehicles',
+-                  lowercase1 => 'vehicle',
+-                  lowercaseX => 'vehicles'
++        CollectionDescription => 'Коллекция мини автомобилей',
++        Items => {0 => 'Автомобиль',
++                  1 => 'Автомобиль',
++                  X => 'Автомобили',
++                  lowercase1 => 'Автомобиль',
++                  lowercaseX => 'Автомобили'
+                   },
+-        NewItem => 'New vehicle',
+-        Currency => 'Currency',
++        NewItem => 'Новый автомобиль',
++        Currency => 'Валюта',
+ 
+ # Main fields
+ 
+-        Main => 'Main information',
++        Main => 'Основная информация',
+ 
+-        Name => 'Name',
+-        Exchange => 'To be sold or exchanged',
+-        Wanted => 'Wanted',
+-        Rating1 => 'Main rating',
+-        Picture1 => 'Main picture',
+-        Scale => 'Scale',
+-        Manufacturer => 'Manufacturer',
+-        Constructor => 'Constructor',
+-        Type1 => 'Type',
+-        Modele => 'Model',
+-        Version => 'Version',
+-        Color => 'Model color',
+-        Pub => 'Advertisement',
+-        Year => 'Year',
+-        Reference => 'Reference',
+-        Kit => 'In kit form',
+-        Transformation => 'Personal transformation',
+-        Comments1 => 'Comments',
++        Name => 'Имя',
++        Exchange => 'Продажа или обмен',
++        Wanted => 'Требуется',
++        Rating1 => 'Основная оценка',
++        Picture1 => 'Основное изображение',
++        Scale => 'Масштаб',
++        Manufacturer => 'Производитель',
++        Constructor => 'Конструктор',
++        Type1 => 'Тип',
++        Modele => 'Модель',
++        Version => 'Версия',
++        Color => 'Цвет модели',
++        Pub => 'Анонс',
++        Year => 'Год',
++        Reference => 'Ссылка',
++        Kit => 'В виде набора',
++        Transformation => 'Личная трансформация',
++        Comments1 => 'Комментарии',
++        Intervalle => 'Интервал',
+ 
+ # Details fields
+ 
+-        Details => 'Details',
++        Details => 'Детально',
+ 
+-        MiscCharacteristics => 'Miscellaneous characteristics',
+-        Material => 'Material',
+-        Molding => 'Molding',
+-        Condition => 'Condition',
+-        Edition => 'Edition',
+-        Collectiontype => 'Collection name',
+-        Serial => 'Series',
+-        Serialnumber => 'Serial number',
+-        Designed => 'Design date',
+-        Madein => 'Manufacture date',
+-        Box1 => 'Kind of box',
+-        Box2 => 'Box description',
+-        Containbox => 'Box contet',
+-        Rating2 => 'Realism',
+-        Rating3 => 'Finish',
+-        Acquisition => 'Acquisition date',
+-        Location => 'Acquisition place',
+-        Buyprice => 'Acquisition price',
+-        Estimate => 'Estimation',
+-        Comments2 => 'Comments',
+-        Decorationset => 'Decoration set',
+-        Characters => 'Characters',
+-        CarFromFilm => 'Movie car',
+-        Filmcar => 'Movie related to the vehicle',
+-        Filmpart => 'Movie part/episode',
+-        Parts => 'Number of parts',
+-        VehiculeDetails => 'Vehicule details',
+-        Detailsparts => 'Details parts',
+-        Detailsdecorations => 'Kind of decorations',
+-        Decorations => 'Number of decorations',
+-        Lwh => 'Length / Width / Height',
+-        Weight => 'Weight',
+-        Framecar => 'Chassis',
+-        Bodycar => 'Bodywork',
+-        Colormirror => 'Model color',
+-        Interior => 'Interior',
+-        Wheels => 'Wheels',
+-        Registrationnumber1 => 'Front registration number',
+-        Registrationnumber2 => 'Back registration number',
+-        RacingCar => 'Racing car',
+-        Course => 'Race',
+-        Courselocation => 'Race place',
+-        Courseyear => 'Race date',
+-        Team => 'Team',
+-        Pilots => 'Pilot(s)',
+-        Copilots => 'Copilot(s)',
+-        Carnumber => 'Vehicle number',
+-        Pub2 => 'Advertisers',
+-        Finishline => 'Finish ranking',
+-        Steeringwheel => 'Position of steering wheel',
++        MiscCharacteristics => 'Разные характеристики',
++        Material => 'Материал',
++        Molding => 'Формат',
++        Condition => 'Состояние',
++        Edition => 'Издание',
++        Collectiontype => 'Имя коллекции',
++        Serial => 'Серия',
++        Serialnumber => 'Серийный номер',
++        Designed => 'Дата проекта',
++        Madein => 'Дата изготовления',
++        Box1 => 'Вид упаковки',
++        Box2 => 'Описание упаковки',
++        Containbox => 'Содержимое упаковки',
++        Rating2 => 'Реализм',
++        Rating3 => 'Отделка',
++        Acquisition => 'Дата приобретения',
++        Location => 'Место приобретения',
++        Buyprice => 'Цена приобретения',
++        Estimate => 'Оценка',
++        Comments2 => 'Комментарии',
++        Decorationset => 'Оформление',
++        Characters => 'Характеристика',
++        CarFromFilm => 'Фильм о автомобиле',
++        Filmcar => 'Фильм связанный с автомобилем',
++        Filmpart => 'Фильм часть/эпизод',
++        Parts => 'Номер части',
++        VehiculeDetails => 'Детали автомобиля',
++        Detailsparts => 'Части деталей',
++        Detailsdecorations => 'Вид оформления',
++        Decorations => 'Номер оформления',
++        Lwh => 'Длинна / Ширина / Высота',
++        Weight => 'Вес',
++        Framecar => 'Шасси',
++        Bodycar => 'Кузов',
++        Colormirror => 'Цвет модели',
++        Interior => 'Внутренняя часть',
++        Wheels => 'Колеса',
++        Registrationnumber1 => 'Передний регистрационный номер',
++        Registrationnumber2 => 'Задний регистрационный номер',
++        RacingCar => 'Гоночный автомобиль',
++        Course => 'Гонки',
++        Courselocation => 'Место гонок',
++        Courseyear => 'Дата гонок',
++        Team => 'Команда',
++        Pilots => 'Пилот(ы)',
++        Copilots => 'Второй пилот(ы)',
++        Carnumber => 'Номер автомобиля',
++        Pub2 => 'Рекламодатели',
++        Finishline => 'Занятое место',
++        Steeringwheel => 'Положение рулевого колеса',
+ 
+ 
+ # Catalogs fields
+ 
+-        Catalogs => 'Catalogs',
++        Catalogs => 'Каталоги',
+ 
+-        OfficialPicture => 'Official picture',
+-        Barcode => 'Barcode',
+-        Referencemirror => 'Reference',
+-        Year3 => 'Availability date',
+-        CatalogCoverPicture => 'Cover',
+-        CatalogPagePicture => 'Page',
+-        Catalogyear => 'Catalog year',
+-        Catalogedition => 'Catalog edition',
+-        Catalogpage => 'Catalog page',
+-        Catalogprice => 'Catalog price',
+-        Personalref => 'Personal reference',
+-        Websitem => 'Mini vehicle\'s manufacturer website',
+-        Websitec => 'Actual vehicle\'s manufacturer website',
+-        Websiteo => 'Useful link',
+-        Comments3 => 'Comments',
++        OfficialPicture => 'Оффициальное изображение',
++        Barcode => 'Штрих-код',
++        Referencemirror => 'Ссылка',
++        Year3 => 'Дата доступности',
++        CatalogCoverPicture => 'Обложка',
++        CatalogPagePicture => 'Страница',
++        Catalogyear => 'Год каталога',
++        Catalogedition => 'Издание каталога',
++        Catalogpage => 'Страница каталога',
++        Catalogprice => 'Цена каталога',
++        Personalref => 'Персональная ссылка',
++        Websitem => 'Веб-сайт производителя мини автомобилей',
++        Websitec => 'Веб-сайт производителя настоящих автомобилей',
++        Websiteo => 'Полезная ссылка',
++        Comments3 => 'Комментарии',
+ 
+ # Pictures fields
+ 
+-        Pictures => 'Pictures',
++        Pictures => 'Изображения',
+ 
+-        OthersComments => 'General remarks',
+-        OthersDetails => 'Other details',
+-        Top1 => 'Above',
+-        Back1 => 'Below',
+-        AVG => 'Front Left',
+-        AV => 'Front',
+-        AVD => 'Front Right',
+-        G => 'Left',
+-        BOX => 'Box',
+-        D => 'Right',
+-        ARG => 'Back Left',
+-        AR => 'Back',
+-        ARD => 'Back Right',
+-        Others => 'Misc',
++        OthersComments => 'Общие комментарии',
++        OthersDetails => 'Другие детали',
++        Top1 => 'Крыша',
++        Back1 => 'Дно',
++        AVG => 'Перед слева',
++        AV => 'Перед',
++        AVD => 'Перед справа',
++        G => 'Левый бок',
++        BOX => 'Коробка',
++        D => 'Правый бок',
++        ARG => 'Зад слева',
++        AR => 'Зад',
++        ARD => 'Зад справа',
++        Others => 'Разные',
+ 
+ # PanelLending fields
+ 
+-        LendingExplanation => 'Useful exchanges during temporary exhibitions',
+-        PanelLending => 'Lendings (for exhibitions)',
+-        Comments4 => 'Comments',
++        LendingExplanation => 'Полезные обмены на время временных выставок',
++        PanelLending => 'Предоставлены (для выставки)',
++        Comments4 => 'Комментарии',
+ 
+ # Realmodel fields
+ 
+-        Realmodel => 'Actual vehicle',
++        Realmodel => 'Настоящий автомобиль',
+ 
+-        Difference => 'Differences with miniature',
+-        Front2 => 'Front',
+-        Back2 => 'Back',
+-        Comments5 => 'Comments',
++        Difference => 'Различия с миниатюрными',
++        Front2 => 'Перед',
++        Back2 => 'Зад',
++        Comments5 => 'Комментарии',
+ 
+-        References => 'References',
++        References => 'Ссылки',
+ 
+      );
+ }
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCmusics.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCmusics.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCmusics.pm	2010-07-27 06:51:42.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCmusics.pm	2011-12-14 06:12:03.000000000 +1100
+@@ -43,7 +43,7 @@
+         Running => 'Время звучания',
+         Release => 'Дата выпуска',
+         Genre => 'Жанр',
+-        Origin => 'Origin',
++        Origin => 'Источник',
+ 
+ #For tracks list
+         Tracks => 'Список композиций',
+@@ -55,11 +55,12 @@
+         Producer => 'Продюсер',
+         Playlist => 'Плейлист',
+         Comments => 'Комментарии',
+-        Label => 'Label',
+-        Url => 'ВЭБ страница',
++        Label => 'Лейбл',
++        Url => 'Вэб страница',
+ 
+-        General => 'Общее',
+-        Details => 'Дательно',
++        Main => 'Общее',
++        Details => 'Детально',
++        General => 'Общие',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCperiodicals.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCperiodicals.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCperiodicals.pm	2010-07-27 06:51:38.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCperiodicals.pm	2011-12-14 05:43:59.000000000 +1100
+@@ -31,21 +31,24 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Periodicals collection',
+-        Items => {0 => 'Periodical',
+-                  1 => 'Periodical',
+-                  X => 'Periodicals'},
+-        NewItem => 'New periodical',
++        CollectionDescription => 'Коллекция периодических изданий',
++        Items => {0 => 'Периодическое издание',
++                  1 => 'Периодическое издание',
++                  X => 'Периодические издания'},
++        NewItem => 'Новое периодическое издание',
+     
+-        Title => 'Title',
+-        Cover => 'Cover',
+-        Periodical => 'Periodical',
+-        Number => 'Number',
+-        Date => 'Date',
+-        Subject => 'Subject',
+-        Articles => 'Articles',
++        Title => 'Название',
++        Cover => 'Обложка',
++        Periodical => 'Периодическое издание',
++        Number => 'Номер',
++        Date => 'Дата',
++        Subject => 'Тема',
++        Articles => 'Статьи',
++        Article => 'Статья',
++        Page => 'Страница',
++        Résumé => 'Резюме',
+ 
+-        General => 'General',
++        General => 'Общие',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCsmartcards.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCsmartcards.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCsmartcards.pm	2010-04-01 20:59:04.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCsmartcards.pm	2011-12-14 07:27:06.000000000 +1100
+@@ -31,77 +31,81 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Smart card collection',
+-        Items => {0 => 'Smart card',
+-                  1 => 'Smart card',
+-                  X => 'Smart cards'},
+-        NewItem => 'New smart card',
+-        Currency => 'Currency',
++        CollectionDescription => 'Коллекция смарт карт',
++        Items => {0 => 'Смарт карта',
++                  1 => 'Смарт карта',
++                  X => 'Смарт карты'},
++        NewItem => 'Новая смарт карта',
++        Currency => 'Валюта',
+ 
+-	  Help => 'Help for fields',
+-	  Help1 => 'Help',
++	  Help => 'Справка для полей',
++	  Help1 => 'Справка',
+ 
+ # Traduction des Champs "Main"
+ 
+-        Main => 'The smart card',
++        Main => 'Смарт карта',
+ 
+-        Cover => 'Picture',
++        Cover => 'Изображение',
+ 
+-        Name => 'Name',
+-        Exchange => 'To be exchanged or sold',
+-        Wanted => 'Wanted',
+-        Rating1 => 'Global rating',
+-        TheSmartCard => 'The smart card, front/back',
+-
+-        Country => 'Country',
+-        Color => 'Color',
+-        Type1 => 'Card type',
+-        Type2 => 'Chip type',
+-        Dimension => 'Length / Width / Thickness',
+-
+-        Box => 'Box',
+-        Chip => 'Chip',
+-        Year1 => 'Edition year',
+-        Year2 => 'Validity year',
+-        Condition => 'Condition',
+-        Charge => 'Rechargeable card',
+-        Variety => 'Variety',
+-
+-        Edition => 'Number of exemplars',
+-        Serial => 'Serial number',
+-        Theme => 'Theme',
++        Name => 'Имя',
++        Exchange => 'Для обмена или продажи',
++        Wanted => 'Требуется',
++        Rating1 => 'Глобальная оценка',
++        TheSmartCard => 'Смарт карта, перед/зад',
++
++        Country => 'Страна',
++        Color => 'Цвет',
++        Type1 => 'Тип карты',
++        Type2 => 'Тип чипа',
++        Dimension => 'Длина / Ширина / Толщина',
++
++        Box => 'Поле',
++        Chip => 'Чип',
++        Year1 => 'Год выпуска',
++        Year2 => 'Год действия',
++        Condition => 'Состояние',
++        Charge => 'Пополняемая карта',
++        Variety => 'Разновидность',
++
++        Edition => 'Количество экземпляров',
++        Serial => 'Серийный номер',
++        Theme => 'Тема',
+ 
+-        Acquisition => 'Acquired on',
++        Acquisition => 'Получена',
+ 
+-        Catalog0 => 'Catalog',
++        Catalog0 => 'Каталог',
+         Catalog1 => 'Phonecote / Infopuce (YT)',
+         Catalog2 => 'La Cote en Poche',
+ 
+-        Reference0 => 'Reference',
+-        Reference1 => 'Reference Phonecote / Infopuce (YT)',
+-        Reference2 => 'Reference La Cote en Poche',
+-        Reference3 => 'Other reference',
+-
+-        Quotationnew00 => 'Quotation for new card',
+-        Quotationnew10 => 'Quotation Phonecote / Infopuce (YT)',
+-        Quotationnew20 => 'Quotation La Cote en Poche',
+-        Quotationnew30 => 'Cotation Autre',
+-        Quotationold00 => 'Quotation for used card',
+-        Quotationold10 => 'Quotation Phonecote / Infopuce (YT)',
+-        Quotationold20 => 'Quotation La Cote en Poche',
+-        Quotationold30 => 'Other quotation',
+-
+-        Title1 => 'Title',
+-
+-        Unit => 'Units / Minutes number',
+-
+-        Pressed => 'Impression type',
+-        Location => 'Impression place',
+-
+-        Comments1 => 'Comments',
+-
+-        Others => 'Misc.',
+-        Weight => 'Weight',
++        Reference0 => 'Ссылка',
++        Reference1 => 'Ссылка на Phonecote / Infopuce (YT)',
++        Reference2 => 'Ссылка на La Cote en Poche',
++        Reference3 => 'Другие ссылки',
++
++        Quotationnew00 => 'Котировка для новой карты',
++        Quotationnew10 => 'Котировка на Phonecote / Infopuce (YT)',
++        Quotationnew20 => 'Котировка на La Cote en Poche',
++        Quotationnew30 => 'Сегодняшний курс',
++        Quotationold00 => 'Котировка для используемой карты',
++        Quotationold10 => 'Котировка на Phonecote / Infopuce (YT)',
++        Quotationold20 => 'Котировка на La Cote en Poche',
++        Quotationold30 => 'Другие котировки',
++
++        Title1 => 'Название',
++
++        Unit => 'Единицы / количество минут',
++
++        Pressed => 'Тип печати',
++        Location => 'Место печати',
++
++        Comments1 => 'Комментарии',
++
++        Others => 'Разное.',
++        Weight => 'Вес',
++        Catalog3 => 'Каталог',
++        Chip1 => 'Чип',
++        Serie => 'Серия',
++        Intervalle => 'Интервал',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCsoftware.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCsoftware.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCsoftware.pm	2010-08-12 04:05:50.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCsoftware.pm	2011-12-10 02:02:58.000000000 +1100
+@@ -31,53 +31,53 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Computer software collection',
+-        Items => {0 => 'Application',
+-                  1 => 'Application',
+-                  X => 'Applications',
+-                  lowercase1 => 'application',
+-                  lowercaseX => 'applications'},
+-        NewItem => 'New application',
++        CollectionDescription => 'Коллекция программного обеспечения',
++        Items => {0 => 'Приложение',
++                  1 => 'Приложение',
++                  X => 'Приложения',
++                  lowercase1 => 'приложение',
++                  lowercaseX => 'приложения'},
++        NewItem => 'Новое приложение',
+     
+         Id => 'Id',
+         Ean => 'EAN',
+-        Name => 'Name',
+-        Platform => 'Platform',
+-        Released => 'Release date',
+-        Homepage => 'Homepage',		
+-        Editor => 'Editor',
+-        Developer => 'Developer',
+-        Category => 'Category',
+-		NumberOfCopies => 'Copies',
+-		Price => 'Price',
+-        Box => 'Box picture',
+-        Case => 'Case',
+-        Manual => 'Instruction manual',
+-        Executable => 'Executable',
+-        Description => 'Description',
+-        License => 'License',
+-        Commercial => 'Commercial',
+-		FreewareNoncommercial => 'Freeware (non-commercial use)',		
+-		OtherOpenSource => 'Other Open Source',
+-		PublicDomain => 'Public Domain',
+-		OtherLicense => 'Other',
+-		Registration => 'Registration',				
+-		RegistrationInfo => 'Registration Info',		
+-		RegInfo => 'Registration Info',
+-		RegistrationName => 'Username',
+-		RegistrationNumber => 'Registration Number',		
+-		PanelRegistration => 'Registration Info',	
+-		RegistrationComments => 'Additional info or comments',
+-        Screenshots => 'Screenshots',
+-        Screenshot1 => 'First screenshot',
+-        Screenshot2 => 'Second screenshot',
+-        Comments => 'Comments',
+-        Url => 'Web page',
+-        General => 'General',
+-        Details => 'Details',
+-        Information => 'Information',
++        Name => 'Имя',
++        Platform => 'Платформа',
++        Released => 'Дата изготовления',
++        Homepage => 'Домашняя страница',		
++        Editor => 'Редактор',
++        Developer => 'Разработчик',
++        Category => 'Категория',
++		NumberOfCopies => 'Копии',
++		Price => 'Цена',
++        Box => 'Блок изображений',
++        Case => 'Версия',
++        Manual => 'Руководство',
++        Executable => 'Исполняемые',
++        Description => 'Описание',
++        License => 'Лицензия',
++        Commercial => 'Коммерческое',
++		FreewareNoncommercial => 'Freeware (некоммерческое использование)',		
++		OtherOpenSource => 'Другие Open Source',
++		PublicDomain => 'Общественый домен',
++		OtherLicense => 'Другое',
++		Registration => 'Регистрация',				
++		RegistrationInfo => 'Данные регистрации',		
++		RegInfo => 'Данные регистрации',
++		RegistrationName => 'Имя пользователя',
++		RegistrationNumber => 'Номер регистрации',		
++		PanelRegistration => 'Данные регистрации',	
++		RegistrationComments => 'Дополнительная информация или комментарии',
++        Screenshots => 'Снимок экрана',
++        Screenshot1 => 'Первый снимок экрана',
++        Screenshot2 => 'Второй снимок экрана',
++        Comments => 'Комментарии',
++        Url => 'Вэб страница',
++        General => 'Общие',
++        Details => 'Детали',
++        Information => 'Информация',
+ 
+-        FilterRatingSelect => 'Rating At _Least...',
++        FilterRatingSelect => 'Рейтинг не ниже...',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCstamps.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCstamps.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCstamps.pm	2010-07-05 00:33:55.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCstamps.pm	2011-12-14 02:56:59.000000000 +1100
+@@ -31,158 +31,159 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Stamp collection',
+-        Items => {0 => 'Stamps',
+-                  1 => 'Stamp',
+-                  X => 'Stamps'},
+-        NewItem => 'New stamp',
+-
+-        General => 'General',
+-        Detail => 'Detail',
+-        Value => 'Value',
+-        Notes => 'Notes',
+-        Views => 'Views',
++        CollectionDescription => 'Коллекция марок',
++        Items => {0 => 'Марки',
++                  1 => 'Марка',
++                  X => 'Марки'},
++        NewItem => 'Новая марка',
++
++        General => 'Обшие',
++        Detail => 'Детали',
++        Condition => 'Состояние',
++        Value => 'Ценность',
++        Notes => 'Примечания',
++        Views => 'Изображения',
+         
+-        Name => 'Name',
+-        Country => 'Country',
+-        Year => 'Year',
+-        Catalog => 'Catalog',
+-        Number => 'Number',
+-        Topic => 'Topic',
+-        Serie => 'Serie',
+-        Designer => 'Designer',
+-        Engraver => 'Engraver',
+-        Type => 'Type',
+-        Format => 'Format',
+-        Description => 'Description',
+-        Color => 'Color',
+-        Gum => 'Gum',
+-        Paper => 'Paper',
+-        Perforation => 'Perforation',
+-        PerforationSize => 'Perforation size',
+-        CancellationType => 'Cancellation type',
+-        Comments => 'Comments',
+-        PrintingVariety => 'Printing variety',
+-        IssueDate => 'Issue date',
+-        EndOfIssue => 'End of issue',
+-        Issue => 'Issue',
+-        Grade => 'Grade',
+-        Status => 'Status',
+-        Adjusted => 'Adjusted',
+-        Cancellation => 'Cancellation',
+-        CancellationCondition => 'Cancellation condition',
+-        GumCondition => 'Gum condition',
+-        PerforationCondition => 'Perforation condition',
+-        ConditionNotes => 'Condition notes',
+-        Error => 'Error',
+-        ErrorNotes => 'Error notes',
+-        FaceValue => 'Face value',
+-        MintValue => 'Mint value',
+-        UsedValue => 'Used value',
+-        PurchasedDate => 'Purchased date',
+-        Quantity => 'Quantity',
+-        History => 'History',
+-        Picture1 => 'Picture 1',
+-        Picture2 => 'Picture 2',
+-        Picture3 => 'Picture 3',
+-
+-        AirMail => 'Air mail',
+-        MilitaryStamp => 'Military stamp',
+-        Official => 'Official',
+-        PostageDue => 'Postage due',
+-        Regular => 'Regular',
+-        Revenue => 'Revenue',
+-        SpecialDelivery => 'Special delivery',
+-        StrikeStamp => 'Strike stamp',
+-        TelegraphStamp => 'Telegraph stamp',
+-        WarStamp => 'War stamp',
+-        WarTaxStamp => 'War tax stamp',
+-
+-        Booklet => 'Booklet',
+-        BookletPane => 'Booklet Pane',
+-        Card => 'Card',
+-        Coil => 'Coil',
+-        Envelope => 'Envelope',
+-        FirstDayCover => 'First Day Cover',
+-        Sheet => 'Sheet',
+-        Single => 'Single',
+-
+-        Heliogravure => 'Heliogravure',
+-        Lithography => 'Lithography',
+-        Offset => 'Offset',
+-        Photogravure => 'Photogravure',
+-        RecessPrinting => 'Recess printing',
+-        Typography => 'Typography',
++        Name => 'Имя',
++        Country => 'Страна',
++        Year => 'Год',
++        Catalog => 'Каталог',
++        Number => 'Номер',
++        Topic => 'Тема',
++        Serie => 'Серия',
++        Designer => 'Дизайнер',
++        Engraver => 'Гравёр',
++        Type => 'Тип',
++        Format => 'Формат',
++        Description => 'Описание',
++        Color => 'Цвет',
++        Gum => 'Клей',
++        Paper => 'Бумага',
++        Perforation => 'Перфорация',
++        PerforationSize => 'Размер перфорации',
++        CancellationType => 'Тип штемпеля',
++        Comments => 'Комментарии',
++        PrintingVariety => 'Разновидность печати',
++        IssueDate => 'Дата выпуска',
++        EndOfIssue => 'Конец выпуска',
++        Issue => 'Выпуск',
++        Grade => 'Качество',
++        Status => 'Состояние',
++        Adjusted => 'Коррекция',
++        Cancellation => 'Штемпель',
++        CancellationCondition => 'Состояние штемпеля',
++        GumCondition => 'Состояние клея',
++        PerforationCondition => 'Состояние перфорации',
++        ConditionNotes => 'Примечания о состоянии',
++        Error => 'Ошибка',
++        ErrorNotes => 'Примечание об ошибке',
++        FaceValue => 'Номинальная стоимость',
++        MintValue => 'Изначальная стоимость',
++        UsedValue => 'Используемая стоимость',
++        PurchasedDate => 'Дата приобретения',
++        Quantity => 'Количество',
++        History => 'История',
++        Picture1 => 'Изображение 1',
++        Picture2 => 'Изображение 2',
++        Picture3 => 'Изображение 3',
++
++        AirMail => 'Авиапочтовая марка',
++        MilitaryStamp => 'Военная марка',
++        Official => 'Официальная',
++        PostageDue => 'Почтовая марка',
++        Regular => 'Регулярная',
++        Revenue => 'Налоговая',
++        SpecialDelivery => 'Специальный выпуск',
++        StrikeStamp => 'Гашеная марка',
++        TelegraphStamp => 'Телеграфная марка',
++        WarStamp => 'Военно-налоговая доплатная марка',
++        WarTaxStamp => 'Марка военного налога',
++
++        Booklet => 'Буклет',
++        BookletPane => 'Панель буклета',
++        Card => 'Открытка',
++        Coil => 'Свиток',
++        Envelop => 'Обложка',
++        FirstDayCover => 'Первичная обложка',
++        Sheet => 'Оттиск',
++        Single => 'Одиночный',
++
++        Heliogravure => 'Гелиогравюра',
++        Lithography => 'Литография',
++        Offset => 'Офсетная печать',
++        Photogravure => 'Факсимильный отпечаток',
++        RecessPrinting => 'Низкая печать',
++        Typography => 'Типографская печать',
+         
+-        OriginalGum => 'Original gum',
+-        Ungummed => 'Ungummed',
+-        Regummed => 'Regummed',
+-
+-        Chalky => 'Chalky',
+-        ChinaPaper => 'China paper',
+-        Coarsed => 'Coarsed',
+-        Glossy => 'Glossy',
+-        Granite => 'Granite',
+-        Laid => 'Laid',
+-        Manila => 'Manila',
+-        Native => 'Native',
+-        Pelure => 'Pelure',
+-        Quadrille => 'Quadrille',
+-        Ribbed => 'Ribbed',
+-        Rice => 'Rice',
+-        Silk => 'Silk',
+-        Smoothed => 'Smoothed',
+-        Thick => 'Thick',
+-        Thin => 'Thin',
+-        Wove => 'Wove',
+-
+-        CoarsedPerforation => 'Coarsed perforation',
+-        CombPerforation => 'Comb perforation',
+-        CompoundPerforation => 'Compound perforation',
+-        DamagedPerforation => 'Damaged perforation',
+-        DoublePerforation => 'Double perforation',
+-        HarrowPerforation => 'Harrow perforation',
+-        LinePerforation => 'Line perforation',
+-        NoPerforation => 'No perforation',
+-
+-        CancellationToOrder => 'Cancellation To Order',
+-        FancyCancellation => 'Fancy cancellation',
+-        FirstDayCancellation => 'First Day cancellation',
+-        NumeralCancellation => 'Numeral cancellation',
+-        PenMarked => 'Pen-Marked',
+-        RailroadCancellation => 'Railroad cancellation',
+-        SpecialCancellation => 'Special cancellation',
+-
+-        Superb => 'Superb',
+-        ExtraFine => 'Extra-Fine',
+-        VeryFine => 'Very fine',
+-        FineVeryFine => 'Fine/Very fine',
+-        Fine => 'Fine',
+-        Average => 'Average',
+-        Poor => 'Poor',
+-
+-        Owned => 'Owned',
+-        Ordered => 'Ordered',
+-        Sold => 'Sold',
+-        ToSell => 'To sell',
+-        Wanted => 'Wanted',
+-
+-        LightCancellation => 'Light cancellation',
+-        HeavyCancellation => 'Heavy cancellation',
+-        ModerateCancellation => 'Moderate cancellation',
+-
+-        MintNeverHinged => 'Mint never hinged',
+-        MintLightHinged => 'Mint light hinged',
+-        HingedRemnant => 'Hinged remnant',
+-        HeavilyHinged => 'Heavily hinged',
+-        LargePartOriginalGum => 'Large part original gum',
+-        SmallPartOriginalGum => 'Small part original gum',
+-        NoGum => 'No gum',
+-
+-        Perfect => 'Perfect',
+-        VeryNice => 'Very nice',
+-        Nice => 'Nice',
+-        Incomplete => 'Incomplete',
++        OriginalGum => 'Оригинальный клеевой состав',
++        Ungummed => 'Не клеенная',
++        Regummed => 'Переклеенная',
++
++        Chalky => 'Мелованная',
++        ChinaPaper => 'Китайская бумага',
++        Coarsed => 'Грубая',
++        Glossy => 'Глянцевая',
++        Granite => 'Гранит',
++        Laid => 'Бумага верже',
++        Manila => 'Манильская бумага',
++        Native => 'Отечественная',
++        Pelure => 'Прочная',
++        Quadrille => 'Кадриль',
++        Ribbed => 'Ребристая',
++        Rice => 'Рисовая',
++        Silk => 'Шёлковая',
++        Smoothed => 'Сглаженная',
++        Thick => 'Толстая',
++        Thin => 'Тонкая',
++        Wove => 'Ткань',
++
++        CoarsedPerforation => 'Грубая зубчатка',
++        CombPerforation => 'Гребенчатая зубчатка',
++        CompoundPerforation => 'Составная зубчатка',
++        DamagedPerforation => 'Поврежденная зубчатка',
++        DoublePerforation => 'Двойная зубчатка',
++        HarrowPerforation => 'Рамочная зубчатка',
++        LinePerforation => 'Линейная зубчатка',
++        NoPerforation => 'Без зубчятки',
++
++        CancellationToOrder => 'Фиктивное гашение',
++        FancyCancellation => 'Пробковый штемпель',
++        FirstDayCancellation => 'Штемпель первого дня',
++        NumeralCancellation => 'Штемпель железнодорожной почты',
++        PenMarked => 'Нарисованный щтемпель',
++        RailroadCancellation => 'Железнодорожный почтовый штемпель',
++        SpecialCancellation => 'Специальное гашение',
++
++        Superb => 'Супер превосходное',
++        ExtraFine => 'Сверх превосходное',
++        VeryFine => 'Превосходное состояние',
++        FineVeryFine => 'Хорошее /Превосходное состояние',
++        Fine => 'Хорошее',
++        Average => 'Среднее',
++        Poor => 'Плохое',
++
++        Owned => 'Собственная',
++        Ordered => 'Заказанная',
++        Sold => 'Проданная',
++        ToSell => 'На продажу',
++        Wanted => 'Требуется',
++
++        LightCancellation => 'Нормальное',
++        HeavyCancellation => 'Плохое',
++        ModerateCancellation => 'Удовлетворительно',
++
++        MintNeverHinged => 'Без следов наклейки',
++        MintLightHinged => 'Легкий след от наклейки',
++        HingedRemnant => 'Маленький остаток от наклейки',
++        HeavilyHinged => 'Большой остаток от наклейки',
++        LargePartOriginalGum => 'Много оригинального клея',
++        SmallPartOriginalGum => 'Мало оригинального клея',
++        NoGum => 'Без клея',
++
++        Perfect => 'Идеальное',
++        VeryNice => 'Очень хорошее',
++        Nice => 'Хорошее',
++        Incomplete => 'Не полное',
+      );
+ }
+ 
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCTVepisodes.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCTVepisodes.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCTVepisodes.pm	2010-07-27 06:51:32.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCTVepisodes.pm	2011-12-14 06:05:42.000000000 +1100
+@@ -32,15 +32,78 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'TV Shows (episodes) collection',
+-        Items => 'Episodes',
+-        NewItem => 'New episode',
+-        NewSeries => 'New series',
+-        Episode => 'Episode',
+-    );
++        CollectionDescription => 'Коллекция телешоу (телепередачи)',
++        Items => 'Телепередачи',
++        NewItem => 'Новая телепередача',
++        NewSeries => 'Новые телепередачи',
++        Episode => 'Телепередача',
++
++        Name => 'Имя',
++        Season => 'Сезон',
++        Part => 'Часть',
++        Episodes => 'Серии',
++        Episode => 'Серия',
++        FirstAired => 'Первый эфир',
++        Time => 'Продолжительность',
++        Producer => 'Производитель',
++        Music => 'Музыка',
++
++        Id => 'Идентификатор',
++        Title => 'Название',
++        Date => 'Дата',
++        Writer => 'Автор',
++        Time => 'Длительность',
++        Director => 'Режиссёр',
++        Country => 'Страна',
++        MinimumAge => 'Минимальный возраст',
++        Genre => 'Жанр',
++        Image => 'Картинка',
++        Original => 'Оригинальный заголовок',
++        Actors => 'Актеры',
++        Actor => 'Актер',
++        Role => 'Роль',
++        Comment => 'Комментарии',
++        Synopsis => 'Описание',
++        Seen => 'Просмотрен',
++        Number => 'носителей',
++        Format => 'Носитель',
++        Location => 'Размещение',
++        Region => 'Регион',
++        Identifier => 'Идентификатор',
++        Url => 'Вэб',
++        Audio => 'Аудио',
++        Video => 'Видео формат',
++        Trailer => 'Видео файл',
++        Serie => 'Коллеция',
++        Rank => 'Ранг',
++        Subtitles => 'Субтитры',
++
++        SeenYes => 'Смотрел',
++        SeenNo => 'Не смотрел',
++
++        AgeUnrated => 'Без ограничений',
++        AgeAll => 'Для _любого возраста',
++        AgeParent => 'Под присмотром родителей',
++
++        Main => 'Основное',
++        General => 'Общие',
++        Details => 'Детали',
++        Lending => 'На руках',
++
++        Information => 'Информация',
++        Languages => 'Языки',
++        Encoding => 'Кодирование',
++
++        FilterAudienceAge => 'Возраст аудитории:',
++        FilterSeenNo => 'Нет',
++        FilterSeenYes => '_Уже просмотрено',
++        FilterRatingSelect => 'Рейтинг не ниже...',
++
++        ExtractSize => 'Размер',
++     );
+     # Both of them are required as importTranslation doesn't recurse
+-    importTranslation('films');
+-    importTranslation('TVseries');
++    importTranslation('Фильмы');
++    importTranslation('Сериалы');
+ }
+ 
+ 1;
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCTVseries.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCTVseries.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCTVseries.pm	2010-07-27 06:51:38.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCTVseries.pm	2011-12-14 06:03:03.000000000 +1100
+@@ -32,19 +32,73 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'TV Shows (series) collection',
+-        Items => 'Series',
+-        NewItem => 'New series',
+-        Name => 'Name',
+-        Season => 'Season',
+-        Part => 'Part',
+-        Episodes => 'Episodes',
+-        FirstAired => 'First Aired',
+-        Time => 'Ep. Length',
+-        Producer => 'Producer',
+-        Music => 'Music',
++        CollectionDescription => 'Коллекция телешоу (сериалы)',
++        Items => 'Сериалы',
++        NewItem => 'Новый сериал',
++        Name => 'Имя',
++        Season => 'Сезон',
++        Part => 'Часть',
++        Episodes => 'Серии',
++        Episode => 'Серия',
++        FirstAired => 'Первый эфир',
++        Time => 'Продолжительность',
++        Producer => 'Производитель',
++        Music => 'Музыка',
++
++        Id => 'Идентификатор',
++        Title => 'Название',
++        Date => 'Дата',
++        Time => 'Длительность',
++        Series => 'Серии',
++        Special => 'Особый',
++        Director => 'Режиссёр',
++        Country => 'Страна',
++        MinimumAge => 'Минимальный возраст',
++        Genre => 'Жанр',
++        Image => 'Картинка',
++        Original => 'Оригинальный заголовок',
++        Actors => 'Актеры',
++        Actor => 'Актер',
++        Role => 'Роль',
++        Comment => 'Комментарии',
++        Synopsis => 'Описание',
++        Seen => 'Просмотрен',
++        Number => 'носителей',
++        Format => 'Носитель',
++        Region => 'Регион',
++        Identifier => 'Идентификатор',
++        Url => 'Вэб',
++        Audio => 'Аудио',
++        Video => 'Видео формат',
++        Trailer => 'Видео файл',
++        Serie => 'Коллеция',
++        Rank => 'Ранг',
++        Subtitles => 'Субтитры',
++
++        SeenYes => 'Смотрел',
++        SeenNo => 'Не смотрел',
++
++        AgeUnrated => 'Без ограничений',
++        AgeAll => 'Для _любого возраста',
++        AgeParent => 'Под присмотром родителей',
++
++        Main => 'Основное',
++        General => 'Общие',
++        Details => 'Детали',
++        Lending => 'На руках',
++
++        Information => 'Информация',
++        Languages => 'Языки',
++        Encoding => 'Кодирование',
++
++        FilterAudienceAge => 'Возраст аудитории:',
++        FilterSeenNo => 'Нет',
++        FilterSeenYes => '_Уже просмотрено',
++        FilterRatingSelect => 'Рейтинг не ниже...',
++
++        ExtractSize => 'Размер',
+      );
+-     importTranslation('Films');
++     importTranslation('Фильмы');
+ }
+ 
+ 1;
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCModels/GCwines.pm gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCwines.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCModels/GCwines.pm	2009-12-05 10:13:49.000000000 +1000
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCModels/GCwines.pm	2011-12-14 02:06:54.000000000 +1100
+@@ -12,50 +12,51 @@
+ 
+     our %lang = (
+     
+-        CollectionDescription => 'Wines collection',
+-        Items => 'Wines',
+-        NewItem => 'New wine',
++        CollectionDescription => 'Коллекция вин',
++        Items => 'Вина',
++        NewItem => 'Новое вино',
+     
+-        Name => 'Name',
+-        Designation => 'Designation',
+-        Vintage => 'Vintage',
+-        Vineyard => 'Vineyard',
+-        Type => 'Type',
+-        Grapes => 'Grapes',
+-        Soil => 'Soil',
+-        Producer => 'Producer',
+-        Country => 'Country',
+-        Volume => 'Volume (ml)',
+-        Alcohol => 'Alcohol (%)',
+-        Medal => 'Medal/Honour',
+-
+-        Storage => 'Storage',
+-        Location => 'Location',
+-        ShelfIndex => 'Index',
+-        Quantity => 'Quantity',
+-        Acquisition => 'Acquisition',
+-        PurchaseDate => 'Purchase date',
+-        PurchasePrice => 'Purchase price',
+-        Gift => 'Gift',
+-        BottleLabel => 'Bottle label',
+-        Website => 'Reference on the web',
+-
+-        Tasted => 'Tasted',
+-        Comments => 'Comments',
+-        Serving => 'Serving',
+-        TastingField => 'Testing notes',
+-
+-        General => 'General',
+-        Details => 'Details',
+-        Tasting => 'Tasting',
+-
+-        TastedNo => 'Non tasted',
+-        TastedYes => 'Tasted',
+-
+-        FilterRange => 'Range',
+-        FilterTastedNo => '_Not yet tasted',
+-        FilterTastedYes => 'Already _tasted',
+-        FilterRatingSelect => 'Rating at _least...'
++        Name => 'Имя',
++        Designation => 'Название',
++        Vintage => 'Выдержка',
++        Vineyard => 'Виноградник',
++        Type => 'Тип',
++        Grapes => 'Виноград',
++        Soil => 'Почва',
++        Distinction => 'Различное',
++        Producer => 'Производитель',
++        Country => 'Страна',
++        Volume => 'Объем (мл)',
++        Alcohol => 'Алкоголь (%)',
++        Medal => 'Медали/Награды',
++
++        Storage => 'Хранение',
++        Location => 'Местонахождение',
++        ShelfIndex => 'Каталог',
++        Quantity => 'Количество',
++        Acquisition => 'Приобретено',
++        PurchaseDate => 'Дата покупки',
++        PurchasePrice => 'Цена покупки',
++        Gift => 'Дарение',
++        BottleLabel => 'Этикетка',
++        Website => 'Ссылка на веб-сайт',
++
++        Tasted => 'Вкус',
++        Comments => 'Комментарии',
++        Serving => 'Порция',
++        TastingField => 'Примечания',
++
++        General => 'Общие',
++        Details => 'Детально',
++        Tasting => 'Дегустация',
++
++        TastedNo => 'Не дегустировалось',
++        TastedYes => 'Дегустировалось',
++
++        FilterRange => 'Ранг',
++        FilterTastedNo => '_Ещё не пробовал',
++        FilterTastedYes => 'Уже попробовал',
++        FilterRatingSelect => 'Рейтинг не ниже...'
+ 
+      );
+ }
+diff -urN gcstar/lib/gcstar/GCLang/RU/GCstar.pm gcstar-patched/lib/gcstar/GCLang/RU/GCstar.pm
+--- gcstar/lib/gcstar/GCLang/RU/GCstar.pm	2010-08-06 05:56:40.000000000 +1100
++++ gcstar-patched/lib/gcstar/GCLang/RU/GCstar.pm	2011-12-10 09:13:57.000000000 +1100
+@@ -47,7 +47,7 @@
+ 
+     our %lang = (
+ 
+-        'LangName' => 'Russian',
++        'LangName' => 'Русский',
+         
+         'Separator' => ': ',
+         
+@@ -78,7 +78,7 @@
+         'InstallDependencies' => 'Зависимости',
+         'InstallPath' => 'Путь',
+         'InstallOptions' => 'Опции',
+-        'InstallSelectDirectory' => 'Выберите базовую директорию для инсталляции',
++        'InstallSelectDirectory' => 'Выбрать базовую директорию для инсталляции',
+         'InstallWithClean' => 'Удалить файлы найденные в директории для инсталляции',
+         'InstallWithMenu' => 'Добавить GCstar в меню Приложений',
+         'InstallNoPermission' => 'Ошибка : У вас нет прав на запись в указанную директорию',
+@@ -102,7 +102,7 @@
+         'SplashInit' => 'Инициализация',
+         'SplashLoad' => 'Загружается',
+         'SplashDisplay' => 'Отображать коллекцию',
+-        'SplashSort' => 'Sorting Collection',
++        'SplashSort' => 'Сортировка коллекции',
+         'SplashDone' => 'Всё готово',
+ 
+ #Import from GCfilms
+@@ -113,34 +113,34 @@
+ #Menus
+         'MenuFile' => '_Файл',
+             'MenuNewList' => '_Новая коллекция',
+-            'MenuStats' => 'Statistics',
++            'MenuStats' => 'Статистика',
+             'MenuHistory' => '_Последние коллеции',
+-            'MenuLend' => 'Показать фильмы на _Руках', # Accepts model codes
++            'MenuLend' => 'Показать фильмы на руках', # Accepts model codes
+             'MenuImport' => '_Импорт',	
+             'MenuExport' => '_Экспорт',
+-            'MenuAddItem' => '_Add Items', # Accepts model codes
++            'MenuAddItem' => '_Добавить элементы', # Accepts model codes
+ 
+         'MenuEdit'  => '_Редактирование',
+             'MenuDuplicate' => '_Дублировать фильм', # Accepts model codes
+-            'MenuDuplicatePlural' => 'Du_plicate Items', # Accepts model codes
+-            'MenuEditSelectAllItems' => 'Select _All Items', # Accepts model codes
++            'MenuDuplicatePlural' => '_Дублировать элементы', # Accepts model codes
++            'MenuEditSelectAllItems' => '_Выбрать все элементы', # Accepts model codes
+             'MenuEditDeleteCurrent' => '_Удалить фильм', # Accepts model codes
+-            'MenuEditDeleteCurrentPlural' => '_Remove Items', # Accepts model codes    
++            'MenuEditDeleteCurrentPlural' => '_Удалить элементы', # Accepts model codes    
+             'MenuEditFields' => '_Изменить поля коллекции',
+             'MenuEditLockItems' => '_Зафиксировать коллекцию',
+     
+         'MenuDisplay' => '_Фильтр',
+-            'MenuSavedSearches' => 'Saved searches',
+-                'MenuSavedSearchesSave' => 'Save current search',
+-                'MenuSavedSearchesEdit' => 'Modify saved searches',
+-            'MenuAdvancedSearch' => 'Расширенный _Поиск',
+-            'MenuViewAllItems' => 'Показать _ВСЕ фильмы', # Accepts model codes
++            'MenuSavedSearches' => 'Сохранение найденного',
++                'MenuSavedSearchesSave' => 'Сохранить найденное',
++                'MenuSavedSearchesEdit' => 'Изменить сохранённое',
++            'MenuAdvancedSearch' => 'Расширенный _поиск',
++            'MenuViewAllItems' => 'Показать _все фильмы', # Accepts model codes
+             'MenuNoFilter' => '_Любой',
+     
+         'MenuConfiguration' => '_Настройки',
+             'MenuDisplayOptions' => '_Отображаемая информация',
+             'MenuBorrowers' => '_Должники',
+-            'MenuToolbarConfiguration' => '_Toolbar controls',
++            'MenuToolbarConfiguration' => '_Панель инструментов',
+             'MenuGenresConversion' => '_Преобразование жанров',
+         
+         'MenuBookmarks' => 'Моя _Коллекция',
+@@ -153,23 +153,23 @@
+             'MenuBugReport' => 'Отправить отчёт об _ошибке',
+             'MenuAbout' => '_О GCstar',
+     
+-        'MenuNewWindow' => 'Показать фильм в _Новом Окне', # Accepts model codes
+-        'MenuNewWindowPlural' => 'Show Items in _New Window', # Accepts model codes
++        'MenuNewWindow' => 'Показать фильм в _новом окне', # Accepts model codes
++        'MenuNewWindowPlural' => 'Показать элементы в _новом окне', # Accepts model codes
+         
+         'ContextExpandAll' => 'Развернуть всё',
+         'ContextCollapseAll' => 'Свернуть всё',
+-        'ContextChooseImage' => 'Choose _Image',
+-        'ContextOpenWith' => 'Open Wit_h',
+-        'ContextImageEditor' => 'Image Editor',
+-        'ContextImgFront' => 'Front',
+-        'ContextImgBack' => 'Back',
+-        'ContextChooseFile' => 'Choose a File',
+-        'ContextChooseFolder' => 'Choose a Folder',
++        'ContextChooseImage' => 'Выбрать изображение',
++        'ContextOpenWith' => 'Открыть в',
++        'ContextImageEditor' => 'Редактор изображений',
++        'ContextImgFront' => 'Спереди',
++        'ContextImgBack' => 'Сзади',
++        'ContextChooseFile' => 'Выбрать файл',
++        'ContextChooseFolder' => 'Выбрать папку',
+     
+         'DialogEnterNumber' => 'Пожалуйста введите занчение',
+ 
+         'RemoveConfirm' => 'Вы действительно хотите удалить этот фильм?', # Accepts model codes
+-        'RemoveConfirmPlural' => 'Do you really want to remove these items?', # Accepts model codes
++        'RemoveConfirmPlural' => 'Вы действительно хотите удалить этот элемент?', # Accepts model codes
+         'DefaultNewItem' => 'Новый элемент', # Accepts model codes
+         'NewItemTooltip' => 'Добавить новый фильм', # Accepts model codes
+         'NoItemFound' => 'Фильм не был найде. Хотите поискать на другом сайте?',
+@@ -181,8 +181,8 @@
+         'PreferencesTooltip' => 'Установите свои предпочтения',
+         'ViewTooltip' => 'Изменить отоюражение коллекции',
+         'PlayTooltip' => 'Воспроизвести видео ассоциируемое с фильмом', # Accepts model codes
+-        'PlayFileNotFound' => 'File to launch was not found in this location:',
+-        'PlayRetry' => 'Retry',
++        'PlayFileNotFound' => 'Файл для запуска не найден в этом месте:',
++        'PlayRetry' => 'Повторить',
+ 
+         'StatusSave' => 'Сохраняется...',
+         'StatusLoad' => 'Загружается...',
+@@ -193,14 +193,14 @@
+         'SaveError' => 'Не могу сохранить список фильмов. Пожалуйста проверьте права доступа и свободное мето на диске.',
+         'OpenError' => 'Не могу открыть список фильмо. Пожалуйста проверьте права доступа.',
+         'OpenFormatError' => 'Не могу открыть список фильмо.',
+-        'OpenVersionWarning' => 'Collection was created with a more recent version of GCstar. If you save it, you may loose some data.',
+-        'OpenVersionQuestion' => 'Do you still want to continue?',
++        'OpenVersionWarning' => 'Коллекция была создана более новой версией GCstar. Если вы сохраните это, вы можете потерять некоторые данные.',
++        'OpenVersionQuestion' => 'Вы все еще хотите продолжить?',
+         'ImageError' => 'Выбранная для сохранения изображение директория не верна. Пожалуйста выберите другую.',
+         'OptionsCreationError'=> 'Не могу создать файл опций: ',
+         'OptionsOpenError'=> 'Не могу открыть файл опций: ',
+         'OptionsSaveError'=> 'Не могу сохранить файл опций: ',
+-        'ErrorModelNotFound' => 'Model not found: ',
+-        'ErrorModelUserDir' => 'User defined models are in: ',
++        'ErrorModelNotFound' => 'Модель не найдена: ',
++        'ErrorModelUserDir' => 'Пользовательские модели в: ',
+         
+         'RandomTooltip' => 'Чего бы посмотреть сегодня вечером ?',
+         'RandomError'=> 'У вас нет непросмотренных фильмов', # Accepts model codes
+@@ -209,7 +209,7 @@
+         'RandomOkTip'=> 'Я согласен на этот фильм',
+         
+         'AboutTitle' => 'О GCstar',
+-        'AboutDesc' => 'Gtk2 Каталог Фиьмов',
++        'AboutDesc' => 'Gtk2 Каталог Фильмов',
+         'AboutVersion' => 'Версия',
+         'AboutTeam' => 'Команда',
+         'AboutWho' => 'Christian Jodar (Tian): Руководитель проекта, Программист
+@@ -226,17 +226,17 @@
+ 
+         'ToolbarRandom' => 'Сегодня вечером',
+         
+-        'UnsavedCollection' => 'Unsaved Collection',
+-        'ModelsSelect' => 'Выберите тип коллекции',
++        'UnsavedCollection' => 'Несохраненная коллекция',
++        'ModelsSelect' => 'Выбрать тип коллекции',
+         'ModelsPersonal' => 'Персональные модели',
+         'ModelsDefault' => 'По-умолчанию',
+         'ModelsList' => 'Определение коллекции',
+-        'ModelSettings' => 'настройки коллекции',
+-        'ModelNewType' => 'новый тип коллекции',
++        'ModelSettings' => 'Настройки коллекции',
++        'ModelNewType' => 'Новый тип коллекции',
+         'ModelName' => 'Имя нового типа коллекции:',
+-		'ModelFields' => 'Fields',
+-		'ModelOptions'	=> 'Options',
+-		'ModelFilters'	=> 'Filters',
++		'ModelFields' => 'Поля',
++		'ModelOptions'	=> 'Опции',
++		'ModelFilters'	=> 'Фильтры',
+         'ModelNewField' => 'Новое поле',
+         'ModelFieldInformation' => 'Информация',
+         'ModelFieldName' => 'Метка:',
+@@ -248,9 +248,9 @@
+         'ModelFieldMax' => 'Максимум:',
+         'ModelFieldList' => 'Список значений:',
+         'ModelFieldListLegend' => '<i>Разделённые запятой</i>',
+-        'ModelFieldDisplayAs' => 'Display as:',
+-        'ModelFieldDisplayAsText' => 'Text',
+-        'ModelFieldDisplayAsGraphical' => 'Rating Control',
++        'ModelFieldDisplayAs' => 'Отображать как:',
++        'ModelFieldDisplayAsText' => 'Текст',
++        'ModelFieldDisplayAsGraphical' => 'Управление рейтингом',
+         'ModelFieldTypeShortText' => 'Короткое описание текст',
+         'ModelFieldTypeLongText' => 'Длинное описание',
+         'ModelFieldTypeYesNo' => 'Да/Нет',
+@@ -260,7 +260,7 @@
+         'ModelFieldTypeImage' => 'Изображение',
+         'ModelFieldTypeSingleList' => 'Простой список',
+         'ModelFieldTypeFile' => 'Файл',
+-        'ModelFieldTypeFormatted' => 'Dependant on other fields',
++        'ModelFieldTypeFormatted' => 'Зависит от других областей',
+         'ModelFieldParameters' => 'Параметры',
+         'ModelFieldHasHistory' => 'Использовать историю',
+         'ModelFieldFlat' => 'Отображать на одной строке',
+@@ -282,14 +282,14 @@
+         'ModelOptionsFieldsPlay' => 'Для кнопки Воспроизведение',
+         'ModelCollectionSettings' => 'Настройки коллекции',
+         'ModelCollectionSettingsLending' => 'Предмет может быть дан взаймы',
+-        'ModelCollectionSettingsTagging' => 'Items can be tagged',
++        'ModelCollectionSettingsTagging' => 'Элементы могут быть помечены',
+         'ModelFilterActivated' => 'Должно быть в строке поиска',
+         'ModelFilterComparison' => 'Сравнение',
+         'ModelFilterContain' => 'Содержит',
+-        'ModelFilterDoesNotContain' => 'Does not contain',
+-        'ModelFilterRegexp' => 'Regular expression',
++        'ModelFilterDoesNotContain' => 'Не содержит',
++        'ModelFilterRegexp' => 'Регулярное выражение',
+         'ModelFilterRange' => 'Диапазон',
+-        'ModelFilterNumeric' => 'ИСпользовать цифровое сравнение',
++        'ModelFilterNumeric' => 'Использовать цифровое сравнение',
+         'ModelFilterQuick' => 'Создать бытрый фильтр',
+         'ModelTooltipName' => 'Используйте имя для того чтобы потом можно было использовать эту модель в других коллекция. Оставьте значение по-умолчанию, для того чтобы сохранить модель только в самой коллекции.',
+         'ModelTooltipLabel' => 'Поле имени так как оно будет отображено',
+@@ -297,51 +297,51 @@
+         'ModelTooltipHistory' => 'Должно ли введенное значение сохраняться в списке ассоциированном с полем',
+         'ModelTooltipFormat' => 'Формат используется для определения действия которое происходит при нажатии кнопки Воспроизведение',
+         'ModelTooltipLending' => 'Тут будут добавлены некоторые поля для управления займами',
+-        'ModelTooltipTagging' => 'This will add some fields to manage tags',
++        'ModelTooltipTagging' => 'Это позволит добавить некоторые поля для управления тегами',
+         'ModelTooltipNumeric' => 'Должны ли значения считаться цифрами при сравнении',
+         'ModelTooltipQuick' => 'Это добавит подменю в фильтры',
+ 
+-        'ResultsTitle' => 'Выберите фильм', # Accepts model codes
+-        'ResultsNextTip' => 'искать на следующем сайте',
++        'ResultsTitle' => 'Выбрать фильм', # Accepts model codes
++        'ResultsNextTip' => 'Искать на следующем сайте',
+         'ResultsPreview' => 'Предпросмотр',
+-        'ResultsInfo' => 'You can add multiple items to the collection by holding down the Ctrl or the Shift key and selecting them', # Accepts model codes
++        'ResultsInfo' => 'Вы можете добавлять элементы в коллекцию, удерживая клавишу Ctrl или Shift выбирать элементы', # Accepts model codes
+         
+         'OptionsTitle' => 'Предпочтения',
+-		'OptionsExpertMode' => 'Expert Mode',
+-        'OptionsPrograms' => 'Specify applications to use for different media, leave blank to use system defaults',
++		'OptionsExpertMode' => 'Режим эксперта',
++        'OptionsPrograms' => 'Укажите приложения которые будут использоваться или оставьте пустым для использования приложений по-умолчанию',
+         'OptionsBrowser' => 'Вэб браузер',
+         'OptionsPlayer' => 'Видео проигрыватель',
+         'OptionsAudio' => 'Аудио проигрыватель',
+-        'OptionsImageEditor' => 'Image editor',
+-        'OptionsCdDevice' => 'CD device',
++        'OptionsImageEditor' => 'Редактор изображений',
++        'OptionsCdDevice' => 'Устройство CD',
+         'OptionsImages' => 'Директория с изображения',
+         'OptionsUseRelativePaths' => 'Использовать относительные пути для изображений',
+         'OptionsLayout' => 'Расположение',
+         'OptionsStatus' => 'Отображать строку статуса',
+-        'OptionsUseStars' => 'Use stars to display ratings',
+-        'OptionsWarning' => 'Внимание : изменения на этой вкладке не будут применыны до перезагрузки приложения.',
++        'OptionsUseStars' => 'Использовать звезды для показа рейтинга',
++        'OptionsWarning' => 'Внимание : изменения на этой вкладке не будут применены до перезагрузки приложения.',
+         'OptionsRemoveConfirm' => 'Спрашивать подтверждение перед удалением фильма',
+         'OptionsAutoSave' => 'Автоматически сохранять коллекцию',
+         'OptionsAutoLoad' => 'Загружать предыдущую коллекцию при старте',
+         'OptionsSplash' => 'Показывать стартовый экран',
+-        'OptionsTearoffMenus' => 'Enable tear-off menus',
+-        'OptionsSpellCheck' => 'Use spelling checker for long text fields',
+-        'OptionsProgramTitle' => 'Выберите программу',
++        'OptionsTearoffMenus' => 'Включить отрывное меню',
++        'OptionsSpellCheck' => 'Использовать проверку орфографии для длинных полей текст',
++        'OptionsProgramTitle' => 'Выбрать программу',
+ 		'OptionsPlugins' => 'Сайт с которого нужно получать данные',
+-		'OptionsAskPlugins' => 'Спрашивать (Все сайты)',
++		'OptionsAskPlugins' => 'Спрашивать (все сайты)',
+ 		'OptionsPluginsMulti' => 'Несколько сайтов',
+-		'OptionsPluginsMultiAsk' => 'Спрашивать (Несколько сайтов)',
+-        'OptionsPluginsMultiPerField' => 'Несколько сайтов (per field)',
+-        'OptionsPluginsMultiPerFieldWindowTitle' => 'Many sites per field order selection',
+-        'OptionsPluginsMultiPerFieldDesc' => 'For each selected field we will return the first non empty information beginning from left',
+-        'OptionsPluginsMultiPerFieldFirst' => 'First',
+-        'OptionsPluginsMultiPerFieldLast' => 'Last',
+-        'OptionsPluginsMultiPerFieldRemove' => 'Remove',
+-        'OptionsPluginsMultiPerFieldClearSelected' => 'Empty selected field list',
++		'OptionsPluginsMultiAsk' => 'Спрашивать (несколько сайтов)',
++        'OptionsPluginsMultiPerField' => 'Несколько сайтов (для полей)',
++        'OptionsPluginsMultiPerFieldWindowTitle' => 'Несколько сайтов в поле выбора порядка',
++        'OptionsPluginsMultiPerFieldDesc' => 'Для каждого выбранного поля мы будем заполнять информацию, начиная с левого',
++        'OptionsPluginsMultiPerFieldFirst' => 'Сначала',
++        'OptionsPluginsMultiPerFieldLast' => 'Продолжить',
++        'OptionsPluginsMultiPerFieldRemove' => 'Удалить',
++        'OptionsPluginsMultiPerFieldClearSelected' => 'Пустые поля выбранного списка',
+ 		'OptionsPluginsList' => 'Задать список',
+-        'OptionsAskImport' => 'Выберите поля для импортирования',
++        'OptionsAskImport' => 'Выбрать поля для импортирования',
+ 		'OptionsProxy' => 'Использовать прокси',
+-		'OptionsCookieJar' => 'Use this cookie jar file',
++		'OptionsCookieJar' => 'Использовать этот файл cookie',
+         'OptionsLang' => 'Язык',
+         'OptionsMain' => 'Основные',
+         'OptionsPaths' => 'Пути',
+@@ -349,13 +349,13 @@
+         'OptionsConveniences' => 'Возможности',
+         'OptionsDisplay' => 'Отображение',
+         'OptionsToolbar' => 'Панель инструментов',
+-        'OptionsToolbars' => {0 => 'Нет', 1 => 'Маленькая', 2 => 'Большая', 3 => 'System setting'},
++        'OptionsToolbars' => {0 => 'Нет', 1 => 'Маленькая', 2 => 'Большая', 3 => 'Системные настройки'},
+         'OptionsToolbarPosition' => 'Позиция',
+         'OptionsToolbarPositions' => {0 => 'Вверху', 1 => 'Внизу', 2 => 'Слева', 3 => 'Справа'},
+-        'OptionsExpandersMode' => 'Expanders too long',
+-        'OptionsExpandersModes' => {'asis' => 'Do nothing', 'cut' => 'Cut', 'wrap' => 'Line wrap'},
+-        'OptionsDateFormat' => 'Date Format',
+-        'OptionsDateFormatTooltip' => 'Format is the one used by strftime(3). Default is %d/%m/%Y',
++        'OptionsExpandersMode' => 'Слишком большое растяжение',
++        'OptionsExpandersModes' => {'asis' => 'Ничего не делать', 'cut' => 'Вырезать', 'wrap' => 'Разбивка строк'},
++        'OptionsDateFormat' => 'Формат даты',
++        'OptionsDateFormatTooltip' => 'Формат с учетом strftime(3). По умолчанию %d/%m/%Y',
+         'OptionsView' => 'Вид',
+         'OptionsViews' => {0 => 'Текст', 1 => 'Картинка', 2 => 'Детально'},
+         'OptionsColumns' => 'Колонки',
+@@ -365,17 +365,17 @@
+         'OptionsTransform' => 'Помещать артикли в конце названия',
+         'OptionsArticles' => 'Артикли (разделённые запятой)',
+         'OptionsSearchStop' => 'Разрешить прерывать поиск',
+-        'OptionsBigPics' => 'Use big pictures when available',
++        'OptionsBigPics' => 'Использовать при наличии большие картинки ',
+         'OptionsAlwaysOriginal' => 'Использовать основной заголовок вместо оригинального, если он отсутствует',
+-        'OptionsRestoreAccelerators' => 'Restore accelerators',
++        'OptionsRestoreAccelerators' => 'Восстановить ускорители',
+         'OptionsHistory' => 'Размер истории',
+         'OptionsClearHistory' => 'Очистить историю',
+ 		'OptionsStyle' => 'Шкура',
+         'OptionsDontAsk' => 'Больше не спрашивать',
+         'OptionsPathProgramsGroup' => 'Приложения',
+-        'OptionsProgramsSystem' => 'Use programs defined by system',
+-        'OptionsProgramsUser' => 'Use specified programs',
+-        'OptionsProgramsSet' => 'Set programs',
++        'OptionsProgramsSystem' => 'Используемые программы определяются системой',
++        'OptionsProgramsUser' => 'Пользовательские программы',
++        'OptionsProgramsSet' => 'Обзор программ',
+         'OptionsPathImagesGroup' => 'Изображения',
+         'OptionsInternetDataGroup' => 'Импорт данных',
+         'OptionsInternetSettingsGroup' => 'Настройки',
+@@ -388,32 +388,32 @@
+         'OptionsPicturesFormat' => 'Префикс для использования в изображениях:',
+         'OptionsPicturesFormatInternal' => 'gcstar__',
+         'OptionsPicturesFormatTitle' => 'Заголовок или имя ассоциированного элемента ',
+-        'OptionsPicturesWorkingDir' => '%WORKING_DIR% or . will be replaced with collection directory (use only on beginning of path)',
+-        'OptionsPicturesFileBase' => '%FILE_BASE% will be replaced by collection file name without suffix (.gcs)',
+-        'OptionsPicturesWorkingDirError' => '%WORKING_DIR% could only be used on the beginning of the path for pictures',
++        'OptionsPicturesWorkingDir' => 'Рабочие директории будут заменены на коллекции каталога (используйте только о начале пути)',
++        'OptionsPicturesFileBase' => 'Базовый файл будет заменен на файл с именем коллекции без суффикса (.gcs)',
++        'OptionsPicturesWorkingDirError' => 'Рабочая директория может быть использована только в начале пути для изображений',
+         'OptionsConfigureMailers' => 'Настройка почтовой программы',
+ 
+         'ImagesOptionsButton' => 'Настройки',
+         'ImagesOptionsTitle' => 'Настройки для списка изображений',
+-        'ImagesOptionsSelectColor' => 'Выберите цвет',
+-        'ImagesOptionsUseOverlays' => 'Use image overlays',
++        'ImagesOptionsSelectColor' => 'Выбрать цвет',
++        'ImagesOptionsUseOverlays' => 'Использовать наложение изображений',
+         'ImagesOptionsBg' => 'Фон',
+-        'ImagesOptionsBgPicture' => 'Выберите фоновое изображение',
++        'ImagesOptionsBgPicture' => 'Выбрать фоновое изображение',
+         'ImagesOptionsFg'=> 'Выделение',
+         'ImagesOptionsBgTooltip' => 'Изменить цвет фона',
+         'ImagesOptionsFgTooltip'=> 'Изменить цвет выделения',
+-        'ImagesOptionsResizeImgList' => 'Automatically change number of columns',
++        'ImagesOptionsResizeImgList' => 'Автоматически менять количество колонок',
+         'ImagesOptionsSizeLabel' => 'Размер',
+         'ImagesOptionsSizeList' => {0 => 'Очень маленькое', 1 => 'Маленькое', 2 => 'Среднее', 3 => 'Большое', 4 => 'Очень большое'},
+-        'ImagesOptionsSizeTooltip' => 'Выберите размер изображеня',
++        'ImagesOptionsSizeTooltip' => 'Выбрать размер изображеня',
+ 		        
+         'DetailedOptionsTitle' => 'Настройки для детализированного списка',
+         'DetailedOptionsImageSize' => 'Размер изображения',
+         'DetailedOptionsGroupItems' => 'Группировать элементы по',
+-        'DetailedOptionsSecondarySort' => 'Sort field for children',
+-		'DetailedOptionsFields' => 'Выберите поля для отображения',
+-        'DetailedOptionsGroupedFirst' => 'Keep together orphaned items',
+-        'DetailedOptionsAddCount' => 'Add number of elements on categories',
++        'DetailedOptionsSecondarySort' => 'Сортировать поле для детей',
++		'DetailedOptionsFields' => 'Выбрать поля для отображения',
++        'DetailedOptionsGroupedFirst' => 'Держать вместе осиротевшие элементы',
++        'DetailedOptionsAddCount' => 'Добавить число элементов на категорию',
+ 
+         'ExtractButton' => 'Информация',
+         'ExtractTitle' => 'Информация из видеофайла',
+@@ -422,15 +422,15 @@
+         'FieldsListOpen' => 'Загрузить список полей из файла',
+         'FieldsListSave' => 'Сохранить список полей в файл',
+         'FieldsListError' => 'Этот список полей не может быть использован с данным типом коллекции',
+-        'FieldsListIgnore' => '--- Ignore',
++        'FieldsListIgnore' => '--- Игнорировать',
+ 
+         'ExportTitle' => 'Экспортировать список фильмов',
+         'ExportFilter' => 'Экспортировать только показанные фильмы',
+         'ExportFieldsTitle' => 'Поля для экспорта',
+-        'ExportFieldsTip' => 'Выберите поля которые вы хотите экспортировать',
++        'ExportFieldsTip' => 'Выбрать поля которые вы хотите экспортировать',
+         'ExportWithPictures' => 'Скопировать изображения в под-директорию',
+-        'ExportSortBy' => 'Sort by',
+-        'ExportOrder' => 'Order',
++        'ExportSortBy' => 'Сортировать по',
++        'ExportOrder' => 'Порядок',
+ 
+         'ImportListTitle' => 'Импортировать другой список фильмоа',
+         'ImportExportData' => 'Данные',
+@@ -442,21 +442,21 @@
+         'ImportExportFieldsEmpty' => 'Вы должны выбрать по карйней мере одно поле',
+         'ImportExportFileEmpty' => 'Вы должны указать имя файла',
+         'ImportFieldsTitle' => 'Поля для экспорта',
+-        'ImportFieldsTip' => 'Выберите поля которые вы хотите экспортировать',
++        'ImportFieldsTip' => 'Выбрать поля которые вы хотите экспортировать',
+         'ImportNewList' => 'Создать новую коллекцию',
+         'ImportCurrentList' => 'Добавить к текущей коллекции',
+         'ImportDropError' => 'Произошла ошибка в процессе открытия, по крайней мере в одном файле. Будет загружен предыдущий список.',
+-        'ImportGenerateId' => 'Generate identifier for each item',
++        'ImportGenerateId' => 'Создание идентификаторов для каждого элемента',
+ 
+         'FileChooserOpenFile' => 'Пожалуйста, выберите файл',
+-        'FileChooserDirectory' => 'Directory',
+-        'FileChooserOpenDirectory' => 'Выберите директорию',
++        'FileChooserDirectory' => 'Директория',
++        'FileChooserOpenDirectory' => 'Выбрать директорию',
+         'FileChooserOverwrite' => 'Такой файл уже существует. Вы хотите перезаписать его?',
+-        'FileAllFiles' => 'All Files',
+-        'FileVideoFiles' => 'Video Files',
+-        'FileEbookFiles' => 'Ebook Files',
+-        'FileAudioFiles' => 'Audio Files',
+-        'FileGCstarFiles' => 'GCstar Collections',
++        'FileAllFiles' => 'Все файлы',
++        'FileVideoFiles' => 'Видел файлы',
++        'FileEbookFiles' => 'Файлы Ebook',
++        'FileAudioFiles' => 'Аудио файлы',
++        'FileGCstarFiles' => 'Коллекции GCstar',
+ 
+         'PanelCompact' => 'Компактно',
+         'PanelReadOnly' => 'Только для чтения',
+@@ -464,34 +464,34 @@
+ 
+         'PanelSearchButton' => 'Получить информацию',
+         'PanelSearchTip' => 'Искать в Инетрнет информацию по этому заголовку',
+-        'PanelSearchContextChooseOne' => 'Choose a site ...',
+-        'PanelSearchContextMultiSite' => 'Use "Many sites"',
+-        'PanelSearchContextMultiSitePerField' => 'Use "Many sites per field"',
+-        'PanelSearchContextOptions' => 'Change options ...',
++        'PanelSearchContextChooseOne' => 'Выбрать сайт ...',
++        'PanelSearchContextMultiSite' => 'Использовать "Многие сайты"',
++        'PanelSearchContextMultiSitePerField' => 'Использовать "Многие сайты, на поле"',
++        'PanelSearchContextOptions' => 'Изменение параметров ...',
+         'PanelImageTipOpen' => 'Щёлкните на картинке для выбора другой.',
+         'PanelImageTipView' => 'Нажмите на картинке для просмотра её в оригинальном размере.',
+         'PanelImageTipMenu' => ' Правый щелчок - еще опции',
+-        'PanelImageTitle' => 'Выберите картинку',
+-        'PanelImageNoImage' => 'No image',
+-        'PanelSelectFileTitle' => 'Выберите файл',
+-        'PanelLaunch' => 'Launch',        
+-        'PanelRestoreDefault' => 'Restore default',
+-        'PanelRefresh' => 'Update',
+-        'PanelRefreshTip' => 'Update information from web',
++        'PanelImageTitle' => 'Выбрать картинку',
++        'PanelImageNoImage' => 'Без картинки',
++        'PanelSelectFileTitle' => 'Выбрать файл',
++        'PanelLaunch' => 'Начать',        
++        'PanelRestoreDefault' => 'По умолчанию',
++        'PanelRefresh' => 'Обновить',
++        'PanelRefreshTip' => 'Обновить информацию с веб',
+ 
+         'PanelFrom' =>'От',
+         'PanelTo' =>'Куда',
+ 
+         'PanelWeb' => 'Смотреть информацию',
+-        'PanelWebTip' => 'Посмотреть информацию в Интернет об этом фильме', # Accepts model codes
++        'PanelWebTip' => 'Посмотреть информацию в интернет об этом фильме', # Accepts model codes
+         'PanelRemoveTip' => 'Удалить текущий фильм', # Accepts model codes
+ 
+-        'PanelDateSelect' => 'Выберите дату',
++        'PanelDateSelect' => 'Выбрать дату',
+         'PanelNobody' => 'Никто',
+         'PanelUnknown' => 'Неизвестно',
+         'PanelAdded' => 'Добавить дату',
+         'PanelRating' => 'Рейтинг',
+-        'PanelPressRating' => 'Press Rating',
++        'PanelPressRating' => 'Пресс-рейтинг',
+         'PanelLocation' => 'Размещение',
+ 
+         'PanelLending' => 'На руках',
+@@ -503,11 +503,11 @@
+         'PanelLendedYes' => 'Взято напрокат',
+         'PanelLendedNo' => 'Доступно',
+ 
+-        'PanelTags' => 'Tags',
+-        'PanelFavourite' => 'Favourite',
+-        'TagsAssigned' => 'Assigned Tags', 
++        'PanelTags' => 'Метки',
++        'PanelFavourite' => 'Избранное',
++        'TagsAssigned' => 'Присвоенные метки', 
+ 
+-        'PanelUser' => 'User fields',
++        'PanelUser' => 'Пользовательские поля',
+ 
+         'CheckUndef' => 'Или',
+         'CheckYes' => 'Да',
+@@ -516,11 +516,11 @@
+         'ToolbarAll' => 'Показать все',
+         'ToolbarAllTooltip' => 'Показать все фильмы',
+         'ToolbarGroupBy' => 'Группировать по',
+-        'ToolbarGroupByTooltip' => 'Выберите поля для группировки элементов в списке',
+-        'ToolbarQuickSearch' => 'Quick search',
+-        'ToolbarQuickSearchLabel' => 'Search',
+-        'ToolbarQuickSearchTooltip' => 'Select the field to search in. Enter the search terms and press Enter',
+-        'ToolbarSeparator' => ' Separator',
++        'ToolbarGroupByTooltip' => 'Выбрать поля для группировки элементов в списке',
++        'ToolbarQuickSearch' => 'Быстрый поиск',
++        'ToolbarQuickSearchLabel' => 'Поиск',
++        'ToolbarQuickSearchTooltip' => 'Выбрать поле для поиска. Введите критерии поиска, и нажатие Enter',
++        'ToolbarSeparator' => 'Разделитель',
+         
+         'PluginsTitle' => 'Искать фильм',
+         'PluginsQuery' => 'Запрос',
+@@ -531,8 +531,8 @@
+         'PluginsAuthor' => 'Автор',
+         'PluginsLang' => 'Язык',
+         'PluginsUseSite' => 'Использовать выбранный сайт для последующего поиска',
+-        'PluginsPreferredTooltip' => 'Site recommended by GCstar',
+-        'PluginDisabled' => 'Disabled',
++        'PluginsPreferredTooltip' => ' Сайт, рекомендованный GCstar',
++        'PluginDisabled' => 'Отключить',
+ 
+         'BorrowersTitle' => 'Конфигурация должника',
+         'BorrowersList' => 'Должники',
+@@ -553,7 +553,7 @@
+ 
+         'BorrowedTitle' => 'На руках', # Accepts model codes
+         'BorrowedDate' => 'С ',
+-        'BorrowedDisplayInPanel' => 'Show item in main window', # Accepts model codes
++        'BorrowedDisplayInPanel' => 'Показать пункт в главном окне', # Accepts model codes
+ 
+         'MailTitle' => 'Послать e-mail',
+         'MailFrom' => 'От: ',
+@@ -564,15 +564,15 @@
+ 
+         'SearchTooltip' => 'Искать все фильмы', # Accepts model codes
+         'SearchTitle' => 'Поиск фильмов', # Accepts model codes
+-        'SearchNoField' => 'No field have been selected for the search box.
+-Add some of them in the Filters tab of the collection settings.',
++        'SearchNoField' => 'Не одно поле не выбрано для поиска.
++Добавьте некоторых из них на вкладке Фильтры в настройках коллекции.',
+ 
+         'QueryReplaceField' => 'Поле для замены',
+         'QueryReplaceOld' => 'Текущее имя',
+         'QueryReplaceNew' => 'Новое имя',
+         'QueryReplaceLaunch' => 'Заменить',
+         
+-        'ImportWindowTitle' => 'Выберите поля для импортирования',
++        'ImportWindowTitle' => 'Выбрать поля для импортирования',
+         'ImportViewPicture' => 'Посмотреть картинку',
+         'ImportSelectAll' => 'Выбрать все',
+         'ImportSelectNone' => 'Сбросить выбор',
+@@ -580,7 +580,7 @@
+         'MultiSiteTitle' => 'Использовать для поиска сайты',
+         'MultiSiteUnused' => 'Неиспользуемые плагины',
+         'MultiSiteUsed' => 'Использовать плагины',
+-        'MultiSiteLang' => 'Заполнить список Английскими плагинами',
++        'MultiSiteLang' => 'Заполнить список английскими плагинами',
+         'MultiSiteEmptyError' => 'У вас пустой список сайтов',
+         'MultiSiteClear' => 'Очистить список',
+         
+@@ -596,7 +596,7 @@
+         'GenresModify' => 'Редактировать конвертацию',
+ 
+         'PropertiesName' => 'Имя коллекции',
+-        'PropertiesLang' => 'Language code',
++        'PropertiesLang' => 'Код языка',
+         'PropertiesOwner' => 'Владелец',
+         'PropertiesEmail' => 'E-mail',
+         'PropertiesDescription' => 'Описание',
+@@ -606,7 +606,7 @@
+         'PropertiesFileSize' => 'Размер',
+         'PropertiesFileSizeSymbols' => ['Байт', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+         'PropertiesCollection' => 'Свойства коллекции',
+-        'PropertiesDefaultPicture' => 'Default picture',
++        'PropertiesDefaultPicture' => 'Изображение по-умолчанию',
+ 
+         'MailProgramsTitle' => 'Программы для отправки почты',
+         'MailProgramsName' => 'Имя',
+@@ -629,36 +629,36 @@
+         'AdvancedSearchTypeAnd' => 'Элементы удовлетворяющие всем критериям', # Accepts model codes
+         'AdvancedSearchTypeOr' => 'Элементы удовлетворяющие по крайней мере одному критерию', # Accepts model codes
+         'AdvancedSearchCriteria' => 'Критерий',
+-        'AdvancedSearchAnyField' => 'Any field',
+-        'AdvancedSearchSaveTitle' => 'Save search',
+-        'AdvancedSearchSaveName' => 'Name',
+-        'AdvancedSearchSaveOverwrite' => 'A saved search already exists with that name. Please use a different one.',
+-        'AdvancedSearchUseCase' => 'Case sensitive',
+-        'AdvancedSearchIgnoreDiacritics' => 'Ignore accents and other diacritics',
+-
+-        'BugReportSubject' => 'Bug report generated from GCstar',
+-        'BugReportVersion' => 'Version',
+-        'BugReportPlatform' => 'Operating system',
+-        'BugReportMessage' => 'Error message',
+-        'BugReportInformation' => 'Additional information',
++        'AdvancedSearchAnyField' => 'Любое поле',
++        'AdvancedSearchSaveTitle' => 'Сохранить найденное',
++        'AdvancedSearchSaveName' => 'Имя',
++        'AdvancedSearchSaveOverwrite' => 'Сохраненное найденное с таким именем уже существует. Пожалуйста, используйте другое.',
++        'AdvancedSearchUseCase' => 'С учетом регистра',
++        'AdvancedSearchIgnoreDiacritics' => 'Игнорировать запятые и другие диакритические знаки',
++
++        'BugReportSubject' => 'Сообщение об ошибке GCstar',
++        'BugReportVersion' => 'Версия',
++        'BugReportPlatform' => 'Операционная система',
++        'BugReportMessage' => 'Сообщение об ошибке',
++        'BugReportInformation' => 'Дополнительная информация',
+ 
+ #Statistics
+-        'StatsFieldToUse' => 'Field to use',
+-        'StatsSortByNumber' => 'Sort by number of {lowercaseX}',
+-        'StatsGenerate' => 'Generate',
+-        'StatsKindOfGraph' => 'Kind of graphic',
+-        'StatsBars' => 'Bars',
+-        'StatsPie' => 'Pie',
+-        'Stats3DPie' => '3D Pie',
+-        'StatsArea' => 'Areas',
+-        'StatsHistory' => 'History',
+-        'StatsWidth' => 'Width',
+-        'StatsHeight' => 'Height',
+-        'StatsFontSize' => 'Font size',
+-        'StatsDisplayNumber' => 'Show numbers',
+-        'StatsSave' => 'Save statistics image to a file',
+-        'StatsAccumulate' => 'Accumulate values',
+-        'StatsShowAllDates' => 'Show all dates',
++        'StatsFieldToUse' => 'Использовать поле',
++        'StatsSortByNumber' => 'Сортировать по номеру {строчные X}',
++        'StatsGenerate' => 'Сгенерировать',
++        'StatsKindOfGraph' => 'Графический вид',
++        'StatsBars' => 'Панель',
++        'StatsPie' => 'Круг',
++        'Stats3DPie' => '3D круг',
++        'StatsArea' => 'Области',
++        'StatsHistory' => 'История',
++        'StatsWidth' => 'Ширина',
++        'StatsHeight' => 'Высота',
++        'StatsFontSize' => 'Размер шрифта',
++        'StatsDisplayNumber' => 'Показать номер',
++        'StatsSave' => 'Сохранить статистику изображения в файл',
++        'StatsAccumulate' => 'Накапливать значения',
++        'StatsShowAllDates' => 'Показать все даты',
+     );
+ }
+ 1;
