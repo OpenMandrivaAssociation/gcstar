@@ -7,7 +7,7 @@
 Summary:	A collection manager 
 Name:		gcstar
 Version:	1.7.0
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Databases
 URL:		https://gna.org/projects/gcstar/
