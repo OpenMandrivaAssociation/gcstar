@@ -6,12 +6,12 @@
 
 Summary:	A collection manager 
 Name:		gcstar
-Version:	1.7.0
-Release:	4
+Version:	1.8.0
+Release:	1
 License:	GPLv2+
 Group:		Databases
 URL:		https://gna.org/projects/gcstar/
-Source0:	http://download.gna.org/gcstar/%{name}-%{version}.tar.gz
+Source0:	https://gitlab.com/GCstar/GCstar/-/archive/v%{version}/GCstar-v%{version}.tar.bz2
 Requires:	perl-Gtk2
 BuildRequires:	desktop-file-utils
 BuildArch:	noarch
