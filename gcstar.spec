@@ -23,7 +23,7 @@ It builds upon gcfilm's legacy.
 You can update your data directly from the Internet.
 
 %prep
-%setup -q -n %{name}
+%autosetup -p1
 
 %install
 install -d %{buildroot}%{_bindir}
